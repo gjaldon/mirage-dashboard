@@ -1,0 +1,19 @@
+OASISFormat:    0.4
+Name:           mirage-dashboard
+Version:        0.1
+Synopsis:       A dashboard displaying useful data from Mirage OS project and its related repositories.
+Authors:        Rudenoise
+License:        GPL
+Plugins:        META (0.4), DevFiles (0.4)
+BuildTools:     ocamlbuild, ocamlopt
+BuildDepends:   core, str,
+                core, camlp4, threads, 
+                sexplib.syntax, 
+                bin_prot.syntax, 
+                comparelib.syntax, 
+                herelib, 
+                herelib.syntax
+Executable "mirage_dashboard"
+    Path: .
+    MainIs: mirage_dashboard.ml
+    CompiledObject: best
