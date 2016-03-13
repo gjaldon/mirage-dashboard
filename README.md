@@ -25,7 +25,6 @@ I'm starting this project as a learning exercise.
 
 ## TO DO:
 
-* Start with CLI app
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
   gather basic data about the _mirageOS_ ecosystem.
 * Dump data to JSON
@@ -38,3 +37,4 @@ I'm starting this project as a learning exercise.
 ## Done:
 
 * README
+* Start with CLI app
