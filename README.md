@@ -23,6 +23,16 @@ I'm starting this project as a learning exercise.
   * Dependencies
   * Other things?
 
+## Work in progress
+
+Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
+
+Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
+
+```sh
+git jar make {{your github username }} mirage_dashboard
+```
+
 ## TO DO:
 
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
