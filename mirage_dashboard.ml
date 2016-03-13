@@ -1,4 +1,5 @@
 open Core.Std
+open Github
 
 let spec =
   let open Command.Spec in
