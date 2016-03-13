@@ -1,7 +1,7 @@
 # mirage-dashboard
 
 A dashboard displaying useful data from
-[Mirage OS](https://mirage.io/) project and its related
+[MirageOS](https://mirage.io/) project and its related
 repositories.
 
 ## Overview
@@ -36,13 +36,13 @@ git jar make {{your github username }} mirage_dashboard
 ## TO DO:
 
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
-  gather basic data about the _mirageOS_ ecosystem.
+  gather basic data about the _MirageOS_ ecosystem.
 * Dump data to JSON
 * Crawl dependencies
 * Create web-accessible HTML/JS dashboard (static)
 * Wrap in Mirage Unikernel
-* Cache data to limit GitHub AIP calls
-* Serve Publicly
+* Cache data to limit GitHub API calls
+* Serve publicly
 
 ## Done:
 
