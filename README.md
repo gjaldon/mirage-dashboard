@@ -56,7 +56,6 @@ Use the app (with its extremely limited form):
 
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
   gather basic data about the _MirageOS_ ecosystem.
-* Dump data to JSON
 * Crawl dependencies
 * Create web-accessible HTML/JS dashboard (static)
 * Wrap in Mirage Unikernel
@@ -67,3 +66,8 @@ Use the app (with its extremely limited form):
 
 * README
 * Start with CLI app
+* Dump data to JSON
+
+## Sources of inspiration/theft:
+
+* [The github gist program from the ocaml-github repo](https://github.com/mirage/ocaml-github/blob/master/gist/gist.ml)
