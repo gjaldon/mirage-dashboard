@@ -24,10 +24,10 @@ let get_token ~cookie_name =
   >>= fun code ->
     return (G.Token.of_auth code)
 
-let get_release_for_repo ~token =
-  return (G.Release.for_repo ~token:token ~user:"mirage" ~repo:"mirage" ())
+let get_release_for_repo ~token ~user ~repo =
+  return (G.Release.for_repo ~token:token ~user:user ~repo:repo ())
 
-let get_mirage_release_from_cookie ~cookie_name =
+let get_release ~cookie_name ~user ~repo =
   get_token ~cookie_name:cookie_name
   >>= fun token ->
-    get_release_for_repo ~token:token
+    get_release_for_repo ~token:token ~user:user ~repo:repo
