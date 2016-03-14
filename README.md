@@ -33,7 +33,7 @@ Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
 # install ocaml-github from opam
 opam install ocaml-github
 # make an access token/cookie
-git-jar make {{your github username }} mirage_dashboard
+git-jar make {{your github username }} mirage-dashboard
 # list events for this repo
 git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 ```
