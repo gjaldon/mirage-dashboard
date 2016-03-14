@@ -20,5 +20,5 @@ let login ~cookie_name =
   | _ -> get_auth_token_from_jar cookie_name
 
 let get_release_for_repo ~token =
-    G.Release.for_repo ~token:token ~user:"mirage" ~repo:"mirage"
+  return (G.Release.for_repo ~token:token ~user:"mirage" ~repo:"mirage" ())
 
