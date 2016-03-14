@@ -19,6 +19,15 @@ let login ~cookie_name =
   | "" -> Lwt.fail (Auth_token_not_found "must specify jar token id/cookie_name")
   | _ -> get_auth_token_from_jar cookie_name
 
+let get_token ~cookie_name =
+  login ~cookie_name: cookie_name
+  >>= fun code ->
+    return (G.Token.of_auth code)
+
 let get_release_for_repo ~token =
   return (G.Release.for_repo ~token:token ~user:"mirage" ~repo:"mirage" ())
 
+let get_mirage_release_from_cookie ~cookie_name =
+  get_token ~cookie_name:cookie_name
+  >>= fun token ->
+    get_release_for_repo ~token:token
