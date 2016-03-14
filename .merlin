@@ -1,2 +1,3 @@
-PKG core github
+PKG core github lwt
+EXT lwt
 S ./src

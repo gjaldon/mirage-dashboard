@@ -1,5 +1,23 @@
 open Core.Std
-open Github
+open Lwt
+
+open Github_t
+module G = Github
+module M = Github.Monad
+
+exception Auth_token_not_found of string
+
+let get_auth_token_from_jar auth_id = 
+  lwt jar = Github_cookie_jar.init () in
+Github_cookie_jar.get jar auth_id >>= function
+    | Some(x) -> return x
+    | None -> Lwt.fail (Auth_token_not_found "given id not in cookie jar")
+
+let login ~cookie_name =
+  match cookie_name with
+  | "" -> Lwt.fail (Auth_token_not_found "must specify username or jar token id")
+  | _ -> get_auth_token_from_jar cookie_name
+
 
 let spec =
   let open Command.Spec in
@@ -12,8 +30,11 @@ let command =
     ~readme: (fun () -> "More detailed info")
     spec
     (fun cookie () ->
-       print_endline cookie
+       Lwt_main.run (
+         login ~cookie_name:cookie >>= fun code ->
+         Lwt_io.printf "%s\n" (Github_j.string_of_auth code)
+       )
     )
 
 let () =
-  Command.run ~version:"0.1" ~build_info:"RWO" command
+  Command.run ~version:"0.1" ~build_info:"https://github.com/rudenoise/mirage-dashboard" command
