@@ -6,7 +6,9 @@ Authors:        Rudenoise
 License:        GPL
 Plugins:        META (0.4), DevFiles (0.4)
 BuildTools:     ocamlbuild, ocamlopt
-BuildDepends:   github.unix, str, core, lwt, lwt.syntax,
+BuildDepends:   github.unix, str, core,
+                lwt, lwt.syntax,
+                yojson,
                 camlp4, threads, 
                 sexplib.syntax, 
                 bin_prot.syntax, 

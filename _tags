@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: dfff84ab6e33bd82371364a0b5e9da2c)
+# DO NOT EDIT (digest: 1a10a6784e0b074d112108f2d8e3dde3)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -27,6 +27,7 @@ true: annot, bin_annot
 <src/mirage_dashboard.{native,byte}>: pkg_sexplib.syntax
 <src/mirage_dashboard.{native,byte}>: pkg_str
 <src/mirage_dashboard.{native,byte}>: pkg_threads
+<src/mirage_dashboard.{native,byte}>: pkg_yojson
 <src/*.ml{,i,y}>: pkg_bin_prot.syntax
 <src/*.ml{,i,y}>: pkg_camlp4
 <src/*.ml{,i,y}>: pkg_comparelib.syntax
@@ -39,4 +40,5 @@ true: annot, bin_annot
 <src/*.ml{,i,y}>: pkg_sexplib.syntax
 <src/*.ml{,i,y}>: pkg_str
 <src/*.ml{,i,y}>: pkg_threads
+<src/*.ml{,i,y}>: pkg_yojson
 # OASIS_STOP

@@ -1,3 +1,8 @@
-PKG core github lwt
+PKG core
+PKG github
+PKG lwt
+PKG yojson
+
 EXT lwt
+
 S ./src

@@ -1,11 +1,14 @@
 open Core.Std
 open Lwt
-
+open Yojson
 open Github_t
+
 module G = Github
 module M = Github.Monad
 
 exception Auth_token_not_found of string
+
+let quite_pretty_json s = Yojson.Safe.pretty_to_string (Yojson.Safe.from_string s)
 
 let get_auth_token_from_jar auth_id = 
   lwt jar = Github_cookie_jar.init () in
@@ -32,7 +35,7 @@ let command =
     (fun cookie () ->
        Lwt_main.run (
          login ~cookie_name:cookie >>= fun code ->
-         Lwt_io.printf "%s\n" (Github_j.string_of_auth code)
+         Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
        )
     )
 
