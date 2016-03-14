@@ -6,4 +6,4 @@ PKG yojson
 EXT lwt
 
 S src
-B _build
+B _build/**

@@ -1,7 +1,5 @@
 open Core.Std
 open Lwt
-open Yojson
-open Github_t
 
 let quite_pretty_json s = Yojson.Safe.pretty_to_string (Yojson.Safe.from_string s)
 
