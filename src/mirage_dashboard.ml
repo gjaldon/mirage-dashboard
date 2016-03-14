@@ -13,9 +13,9 @@ let command =
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
     ~readme: (fun () -> "More detailed info")
     spec
-    (fun cookie () ->
+    (fun cookie_name () ->
        Lwt_main.run (
-         Github_wrapper.login ~cookie_name:cookie
+         Github_wrapper.login ~cookie_name
          >>= fun code ->
            Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
        )

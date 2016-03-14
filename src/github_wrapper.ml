@@ -20,14 +20,14 @@ let login ~cookie_name =
   | _ -> get_auth_token_from_jar cookie_name
 
 let get_token ~cookie_name =
-  login ~cookie_name: cookie_name
+  login ~cookie_name
   >>= fun code ->
     return (G.Token.of_auth code)
 
 let get_release_for_repo ~token ~user ~repo =
-  return (G.Release.for_repo ~token:token ~user:user ~repo:repo ())
+  return (G.Release.for_repo ~token ~user ~repo ())
 
 let get_release ~cookie_name ~user ~repo =
-  get_token ~cookie_name:cookie_name
+  get_token ~cookie_name
   >>= fun token ->
-    get_release_for_repo ~token:token ~user:user ~repo:repo
+    get_release_for_repo ~token ~user ~repo
