@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: faa8632b687f259be422fcd2f1012e5f)
+# DO NOT EDIT (digest: f1790191afcab51bcd23a97cb325db8d)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -15,24 +15,24 @@ true: annot, bin_annot
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Executable mirage_dashboard
-<mirage_dashboard.{native,byte}>: pkg_bin_prot.syntax
-<mirage_dashboard.{native,byte}>: pkg_camlp4
-<mirage_dashboard.{native,byte}>: pkg_comparelib.syntax
-<mirage_dashboard.{native,byte}>: pkg_core
-<mirage_dashboard.{native,byte}>: pkg_github
-<mirage_dashboard.{native,byte}>: pkg_herelib
-<mirage_dashboard.{native,byte}>: pkg_herelib.syntax
-<mirage_dashboard.{native,byte}>: pkg_sexplib.syntax
-<mirage_dashboard.{native,byte}>: pkg_str
-<mirage_dashboard.{native,byte}>: pkg_threads
-<*.ml{,i,y}>: pkg_bin_prot.syntax
-<*.ml{,i,y}>: pkg_camlp4
-<*.ml{,i,y}>: pkg_comparelib.syntax
-<*.ml{,i,y}>: pkg_core
-<*.ml{,i,y}>: pkg_github
-<*.ml{,i,y}>: pkg_herelib
-<*.ml{,i,y}>: pkg_herelib.syntax
-<*.ml{,i,y}>: pkg_sexplib.syntax
-<*.ml{,i,y}>: pkg_str
-<*.ml{,i,y}>: pkg_threads
+<src/mirage_dashboard.{native,byte}>: pkg_bin_prot.syntax
+<src/mirage_dashboard.{native,byte}>: pkg_camlp4
+<src/mirage_dashboard.{native,byte}>: pkg_comparelib.syntax
+<src/mirage_dashboard.{native,byte}>: pkg_core
+<src/mirage_dashboard.{native,byte}>: pkg_github
+<src/mirage_dashboard.{native,byte}>: pkg_herelib
+<src/mirage_dashboard.{native,byte}>: pkg_herelib.syntax
+<src/mirage_dashboard.{native,byte}>: pkg_sexplib.syntax
+<src/mirage_dashboard.{native,byte}>: pkg_str
+<src/mirage_dashboard.{native,byte}>: pkg_threads
+<src/*.ml{,i,y}>: pkg_bin_prot.syntax
+<src/*.ml{,i,y}>: pkg_camlp4
+<src/*.ml{,i,y}>: pkg_comparelib.syntax
+<src/*.ml{,i,y}>: pkg_core
+<src/*.ml{,i,y}>: pkg_github
+<src/*.ml{,i,y}>: pkg_herelib
+<src/*.ml{,i,y}>: pkg_herelib.syntax
+<src/*.ml{,i,y}>: pkg_sexplib.syntax
+<src/*.ml{,i,y}>: pkg_str
+<src/*.ml{,i,y}>: pkg_threads
 # OASIS_STOP

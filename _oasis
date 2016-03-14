@@ -14,6 +14,6 @@ BuildDepends:   github, str,
                 herelib, 
                 herelib.syntax
 Executable "mirage_dashboard"
-    Path: .
+    Path: ./src
     MainIs: mirage_dashboard.ml
     CompiledObject: best
