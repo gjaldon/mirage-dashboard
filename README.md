@@ -25,6 +25,14 @@ I'm starting this project as a learning exercise.
 
 ## Work in progress:
 
+Build.
+
+```sh
+oasis setup
+./configure
+make
+```
+
 Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
 
 Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
@@ -36,6 +44,12 @@ opam install ocaml-github
 git-jar make {{your github username }} mirage-dashboard
 # list events for this repo
 git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
+```
+
+Use the app (with its extremely limited form):
+
+```sh
+./mirage-dashboard -c mirage-dashboard
 ```
 
 ## TO DO:
