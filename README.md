@@ -30,7 +30,12 @@ Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
 Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
 
 ```sh
-git jar make {{your github username }} mirage_dashboard
+# install ocaml-github from opam
+opam install ocaml-github
+# make an access token/cookie
+git-jar make {{your github username }} mirage_dashboard
+# list events for this repo
+git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 ```
 
 ## TO DO:
