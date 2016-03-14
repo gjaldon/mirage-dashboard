@@ -3,24 +3,7 @@ open Lwt
 open Yojson
 open Github_t
 
-module G = Github
-module M = Github.Monad
-
-exception Auth_token_not_found of string
-
 let quite_pretty_json s = Yojson.Safe.pretty_to_string (Yojson.Safe.from_string s)
-
-let get_auth_token_from_jar auth_id = 
-  lwt jar = Github_cookie_jar.init () in
-Github_cookie_jar.get jar auth_id >>= function
-    | Some(x) -> return x
-    | None -> Lwt.fail (Auth_token_not_found "given id not in cookie jar")
-
-let login ~cookie_name =
-  match cookie_name with
-  | "" -> Lwt.fail (Auth_token_not_found "must specify username or jar token id")
-  | _ -> get_auth_token_from_jar cookie_name
-
 
 let spec =
   let open Command.Spec in
@@ -34,7 +17,8 @@ let command =
     spec
     (fun cookie () ->
        Lwt_main.run (
-         login ~cookie_name:cookie >>= fun code ->
+         Github_wrapper.login ~cookie_name:cookie >>=
+         fun code ->
          Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
        )
     )
