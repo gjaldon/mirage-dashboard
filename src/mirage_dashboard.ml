@@ -15,9 +15,9 @@ let command =
     spec
     (fun cookie () ->
        Lwt_main.run (
-         Github_wrapper.login ~cookie_name:cookie >>=
-         fun code ->
-         Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
+         Github_wrapper.login ~cookie_name:cookie
+         >>= fun code ->
+           Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
        )
     )
 
