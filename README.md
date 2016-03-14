@@ -23,7 +23,7 @@ I'm starting this project as a learning exercise.
   * Dependencies
   * Other things?
 
-## Work in progress
+## Work in progress:
 
 Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
 
