@@ -30,4 +30,5 @@ let get_release_for_repo ~token ~user ~repo =
 let get_release ~cookie_name ~user ~repo =
   get_token ~cookie_name
   >>= fun token ->
-    get_release_for_repo ~token ~user ~repo
+  get_release_for_repo ~token ~user ~repo
+
