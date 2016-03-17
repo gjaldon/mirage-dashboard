@@ -33,15 +33,6 @@ let command =
 
        )
     )
-    (*
-    (fun cookie_name () ->
-       Lwt_main.run (
-         Github_wrapper.login ~cookie_name
-         >>= fun code ->
-           Lwt_io.printf "%s\n" (quite_pretty_json (Github_j.string_of_auth code))
-       )
-    )
-    *)
 
 let () =
   Command.run ~version:"0.1" ~build_info:"https://github.com/rudenoise/mirage-dashboard" command
