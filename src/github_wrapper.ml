@@ -33,10 +33,13 @@ let get_release ~cookie_name ~user ~repo =
   get_release_for_repo ~token ~user ~repo
 
 let release_to_list releases =
-  Github.(
-    Monad.(
+  G.(
+    M.(
       run (
         Stream.to_list releases
       )
     )
   )
+
+let release_strings release_list =
+  List.map (fun rel -> Github_j.string_of_release rel) release_list

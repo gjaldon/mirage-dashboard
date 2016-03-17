@@ -13,3 +13,5 @@ val get_release :
   Github_t.release Github.Stream.t Lwt.t
 
 val release_to_list : Github_t.release Github.Stream.t -> Github_t.release list Lwt.t
+
+val release_strings : Github_t.release list -> string list
