@@ -42,4 +42,7 @@ let release_to_list releases =
   )
 
 let release_strings release_list =
-  List.map (fun rel -> Github_j.string_of_release rel) release_list
+  List.map (
+    fun rel ->
+      Github_j.string_of_release rel
+  ) release_list
