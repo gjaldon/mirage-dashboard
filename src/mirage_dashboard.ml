@@ -4,7 +4,7 @@ open Lwt
 let quite_pretty_json s = Yojson.Safe.pretty_to_string (Yojson.Safe.from_string s)
 
 let first_str = function
-  | [] -> ""
+  | [] -> "{}"
   | hd :: _ -> hd
 
 
@@ -27,8 +27,8 @@ let command =
          >>= fun release ->
          Github_wrapper.release_to_list release
          >>= fun release_list ->
-         return (Github_wrapper.release_strings release_list)
-         >>= fun release_strings ->
+         Github_wrapper.release_strings release_list
+         |> fun release_strings ->
          Lwt_io.printf "%s\n" (quite_pretty_json (first_str release_strings))
 
        )
