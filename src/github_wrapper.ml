@@ -32,3 +32,11 @@ let get_release ~cookie_name ~user ~repo =
   >>= fun token ->
   get_release_for_repo ~token ~user ~repo
 
+let release_to_list releases =
+  Github.(
+    Monad.(
+      run (
+        Stream.to_list releases
+      )
+    )
+  )
