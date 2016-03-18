@@ -12,9 +12,9 @@ changes is tricky.
 As part of the [2016 MirageOS Hackathon](http://canopy.mirage.io),
 I'm starting this project as a learning exercise.
 
-## What will the dashboard show?
+### What will the dashboard show?
 
-* A list the core MirageOS libraries.
+* A list the core MirageOS libraries, on GitHub.
 * Data related to each library:
   * Name
   * License
@@ -27,6 +27,16 @@ I'm starting this project as a learning exercise.
   * CI status
   * Last activity: commit / issue
 
+### How are the libraries chosen?
+
+To get things going there is a JSON file
+[repos.js](https://raw.githubusercontent.com/rudenoise/mirage-dashboard/master/data/repos.json)
+that lists all relevant repositories.
+
+Each repo has tags to help categorise them. Tags could include:
+_depricated, core, network, build, etc..._
+
+Please add/remove/update/edit/tag via pull requests.
 
 ## Work in progress:
 
