@@ -16,12 +16,17 @@ I'm starting this project as a learning exercise.
 
 * A list the core MirageOS libraries.
 * Data related to each library:
-  * Releases
-  * Commits since last release
-  * Top contributors
-  * Build status (release, current...)
-  * Dependencies
-  * Other things?
+  * Name
+  * License
+  * Last release (version + date)
+  * Commits to master since last release
+  * Open issues (maybe more detailed numbers from labels)
+  * Open PRs
+  * Branches (maybe active only? Some mirage repos have way too many stale branches)
+  * Top 3 contributors
+  * CI status
+  * Last activity: commit / issue
+
 
 ## Work in progress:
 
