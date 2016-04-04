@@ -10,12 +10,14 @@ let repos_from_json =
     let repo_list = repos_data |> Yojson.Safe.Util.to_list in
     let filtered = (
         `List
-        (
-            List.map
-            ~f: (fun item ->
-                Yojson.Safe.Util.member
+        (List.map
+        ~f: (fun item ->
+            `Assoc [(
+                "repo",
+                (Yojson.Safe.Util.member
                 "repo"
                 item)
-            repo_list)) in
+            ); ("thing", `String "test")])
+        repo_list)) in
     Yojson.Safe.pretty_to_string filtered
 
