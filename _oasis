@@ -10,11 +10,11 @@ BuildDepends:   github.unix, str, core,
                 lwt, lwt.syntax,
                 yojson,
                 camlp4, threads, 
-                sexplib.syntax, 
-                bin_prot.syntax, 
-                comparelib.syntax, 
+                sexplib, 
+                bin_prot, 
+                comparelib, 
                 herelib, 
-                herelib.syntax
+                herelib
 Executable "mirage_dashboard"
     Path: ./src
     MainIs: mirage_dashboard.ml
