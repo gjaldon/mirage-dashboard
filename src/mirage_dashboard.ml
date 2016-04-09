@@ -13,6 +13,18 @@ let spec =
   empty
     +> flag "-c" (required string) ~doc:"cookie github auth cookie, from git-jar"
 
+let get_release_and_print_async ~cookie_name ~user ~repo =
+    Github_wrapper.get_release
+      ~cookie_name
+      ~user
+      ~repo
+    >>= fun release ->
+    Github_wrapper.release_to_list release
+    >>= fun release_list ->
+    Github_wrapper.release_strings release_list
+    |> fun release_strings ->
+    Lwt_io.printf "%s\n" (quite_pretty_json (first_str release_strings))
+
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
@@ -20,17 +32,10 @@ let command =
     spec
     (fun cookie_name () ->
        Lwt_main.run (
-         Github_wrapper.get_release
-           ~cookie_name
-           ~user: "mirage"
-           ~repo: "mirage"
-         >>= fun release ->
-         Github_wrapper.release_to_list release
-         >>= fun release_list ->
-         Github_wrapper.release_strings release_list
-         |> fun release_strings ->
-         Lwt_io.printf "%s\n" (quite_pretty_json (first_str release_strings))
-
+         Lwt.join [
+             (get_release_and_print_async ~cookie_name ~user:"mirage" ~repo:"mirage");
+             (get_release_and_print_async ~cookie_name ~user:"mirage" ~repo:"mirage")
+         ]
        )
     )
 
