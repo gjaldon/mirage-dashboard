@@ -73,25 +73,15 @@ let command =
     (fun cookie_name () ->
        Lwt_main.run (
            (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
-           (get_all_repos ~cookie_name all_repos
+           get_all_repos ~cookie_name all_repos
            >>= fun repos ->
                List.fold
-               ~f:(fun accum item ->
-                    accum ^ item)
+               ~f:(fun accum repo_json_str ->
+                    accum ^ repo_json_str)
                ~init:""
                repos
-               |> fun x ->
-                   Lwt_io.printf "%s\n" x
-           )
-           (*
-               List.fold
-               repos
-               ~init: ""
-               ~f: (fun accum item ->
-                   accum ^ item)
-               |> fun str ->
-                       Lwt_io.printf "%s\n" str
-            *)
+               |> fun long_invalid_json_str ->
+                   Lwt_io.printf "%s\n" long_invalid_json_str
        )
     )
 
