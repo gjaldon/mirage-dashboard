@@ -17,7 +17,8 @@ let repo_list_from_json file_path =
                         "repo"
                         item
                     ) in
-                    let repo_path_string = Yojson.Safe.to_string repo_path in
+                    let repo_path_string_with_quote = Yojson.Safe.to_string repo_path in
+                    let repo_path_string = (Str.global_replace (Str.regexp "\"") "" repo_path_string_with_quote) in
                     let parts = (String.split ~on:'/' repo_path_string) in
                     match parts with
                     | user :: repo :: tl -> (user, repo)

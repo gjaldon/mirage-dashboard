@@ -52,11 +52,7 @@ let command =
     spec
     (fun cookie_name () ->
        Lwt_main.run (
-           (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
-           Lwt.join (print_all_repos ~cookie_name [
-               ("mirage", "mirage");
-               ("avsm", "ezxmlm")
-           ])
+           Lwt.join (print_all_repos ~cookie_name all_repos)
        )
     )
 
