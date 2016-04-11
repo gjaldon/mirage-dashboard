@@ -25,6 +25,26 @@ let get_release_and_print_async ~cookie_name ~user ~repo =
     |> fun release_strings ->
     Lwt_io.printf "%s\n" (quite_pretty_json (first_str release_strings))
 
+let all_repos =
+    Dashboard_data.repo_list_from_json "data/repos.json"
+    |> (fun repo_list ->
+        List.map
+        ~f:(
+            fun repo ->
+                match repo with
+                | ((u_name, r_name), tags) -> (u_name, r_name)
+        )
+        repo_list
+    )
+
+let print_all_repos ~cookie_name all_repos =
+    List.map
+    ~f:(
+        fun (user, repo) ->
+            get_release_and_print_async ~cookie_name ~user:user ~repo:repo
+    )
+    all_repos
+
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
@@ -32,10 +52,11 @@ let command =
     spec
     (fun cookie_name () ->
        Lwt_main.run (
-         Lwt.join [
-             (get_release_and_print_async ~cookie_name ~user:"mirage" ~repo:"mirage");
-             (get_release_and_print_async ~cookie_name ~user:"mirage" ~repo:"mirage")
-         ]
+           (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
+           Lwt.join (print_all_repos ~cookie_name [
+               ("mirage", "mirage");
+               ("avsm", "ezxmlm")
+           ])
        )
     )
 

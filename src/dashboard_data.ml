@@ -12,9 +12,16 @@ let repo_list_from_json file_path =
         List.map
         ~f: (fun item -> (
                 (
-                    Yojson.Safe.Util.member
-                    "repo"
-                    item
+                    let repo_path = (
+                        Yojson.Safe.Util.member
+                        "repo"
+                        item
+                    ) in
+                    let repo_path_string = Yojson.Safe.to_string repo_path in
+                    let parts = (String.split ~on:'/' repo_path_string) in
+                    match parts with
+                    | user :: repo :: tl -> (user, repo)
+                    | _ -> ("mirage", "mirage")
                 ),
                 (
                     (
