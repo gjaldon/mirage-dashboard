@@ -38,17 +38,6 @@ let all_repos =
         repo_list
     )
 
-let get_all_repos ~cookie_name all_repos =
-  Lwt_main.run 
-    (
-      Lwt_list.map_s
-        (
-          fun (user, repo) ->
-            get_release_async ~cookie_name ~user:user ~repo:repo
-        )
-        all_repos
-    )
-
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
@@ -56,13 +45,17 @@ let command =
     spec
     (fun cookie_name () ->
        Lwt_main.run (
-         (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
-         get_all_repos ~cookie_name all_repos
-         |> fun repos ->
-         String.concat ~sep:", " repos
-         |> fun long_invalid_json_str ->
-         (* return (print_endline ("{" ^ long_invalid_json_str ^ "}")) *)
-         Lwt_io.printf "%s\n" long_invalid_json_str
+         (
+           Lwt_list.map_s
+             (
+               fun (user, repo) ->
+                 get_release_async ~cookie_name ~user ~repo
+             )
+             all_repos
+         )
+         >>= fun r_list ->
+         quite_pretty_json ("[" ^ (String.concat ~sep:", " r_list) ^ "]")
+         |> Lwt_io.printf "%s\n"
        )
     )
 
