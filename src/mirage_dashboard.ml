@@ -38,30 +38,30 @@ let get_release_async ~cookie_name ~user ~repo =
         return (first_str release_strings)
 
 let all_repos =
-    Dashboard_data.repo_list_from_json "data/repos.json"
-    |> (fun repo_list ->
-        List.map
+  Dashboard_data.repo_list_from_json "data/repos.json"
+  |> (fun repo_list ->
+      List.map
         ~f:(
-            fun repo ->
-                match repo with
-                | ((u_name, r_name), tags) -> (u_name, r_name)
+          fun repo ->
+            match repo with
+            | ((u_name, r_name), tags) -> (u_name, r_name)
         )
         repo_list
     )
 
 let print_all_repos ~cookie_name all_repos =
-    List.map
+  List.map
     ~f:(
-        fun (user, repo) ->
-            get_release_and_print_async ~cookie_name ~user:user ~repo:repo
+      fun (user, repo) ->
+        get_release_and_print_async ~cookie_name ~user:user ~repo:repo
     )
     all_repos
 
 let get_all_repos ~cookie_name all_repos =
-    Lwt_list.map_s
+  Lwt_list.map_s
     (
-        fun (user, repo) ->
-            get_release_async ~cookie_name ~user:user ~repo:repo
+      fun (user, repo) ->
+        get_release_async ~cookie_name ~user:user ~repo:repo
     )
     all_repos
 
@@ -72,16 +72,13 @@ let command =
     spec
     (fun cookie_name () ->
        Lwt_main.run (
-           (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
-           get_all_repos ~cookie_name all_repos
-           >>= fun repos ->
-               List.fold
-               ~f:(fun accum repo_json_str ->
-                    accum ^ repo_json_str)
-               ~init:""
-               repos
-               |> fun long_invalid_json_str ->
-                   Lwt_io.printf "%s\n" long_invalid_json_str
+         (* Lwt.join (print_all_repos ~cookie_name all_repos) *)
+         get_all_repos ~cookie_name all_repos
+         >>= fun repos ->
+         String.concat ~sep:", " repos
+         |> fun long_invalid_json_str ->
+         return (print_endline ("{" ^ long_invalid_json_str ^ "}"))
+         (* Lwt_io.printf "%s\n" long_invalid_json_str *)
        )
     )
 
