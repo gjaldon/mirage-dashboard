@@ -69,8 +69,6 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
-* Use [ocaml-github](https://github.com/mirage/ocaml-github) to
-  gather basic data about the _MirageOS_ ecosystem.
 * Crawl dependencies
 * Create web-accessible HTML/JS dashboard (static)
 * Wrap in Mirage Unikernel
@@ -82,6 +80,8 @@ Use the app (with its extremely limited form):
 * README
 * Start with CLI app
 * Dump data to JSON
+* Use [ocaml-github](https://github.com/mirage/ocaml-github) to
+  gather basic data about the _MirageOS_ ecosystem.
 
 ## Sources of inspiration/theft:
 
