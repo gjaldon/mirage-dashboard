@@ -58,8 +58,8 @@ let repos_from_json_to_json =
   ) in
   Yojson.Safe.pretty_to_string filtered
 
-let all_repos =
-  repo_list_from_json "data/repos.json"
+let all_repos ~repos_json_path =
+  repo_list_from_json repos_json_path
   |> (fun repo_list ->
       List.map
         ~f:(

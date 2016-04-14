@@ -64,7 +64,7 @@ git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 Use the app (with its extremely limited form):
 
 ```sh
-./mirage-dashboard -c mirage-dashboard
+./mirage_dashboard.native -c mirage-dashboard -r data/repos.json | jq '[.[]
 ```
 
 ## TO DO:
