@@ -3,9 +3,9 @@ open Lwt
 module G = Github
 module M = Github.Monad
 
-let first_str = function
+let first_release_str = function
   | hd :: _ -> hd
-  | _ -> "{}"
+  | _ -> "{\"tag_name\":\"no releases\"}"
 
 let get_releases_for_repo ~token ~user ~repo =
   return (G.Release.for_repo ~token ~user ~repo ())
@@ -40,4 +40,4 @@ let get_current ~cookie_name ~user ~repo =
     >>= fun release_list ->
         release_strings release_list
     |> fun release_strings ->
-        return (first_str release_strings)
+        return (first_release_str release_strings)
