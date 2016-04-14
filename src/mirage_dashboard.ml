@@ -8,18 +8,6 @@ let spec =
   empty
     +> flag "-c" (required string) ~doc:"cookie github auth cookie, from git-jar"
 
-let all_repos =
-  Dashboard_data.repo_list_from_json "data/repos.json"
-  |> (fun repo_list ->
-      List.map
-        ~f:(
-          fun repo ->
-            match repo with
-            | ((u_name, r_name), tags) -> (u_name, r_name)
-        )
-        repo_list
-    )
-
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
@@ -33,7 +21,7 @@ let command =
                fun (user, repo) ->
                  Get_releases.get_current ~cookie_name ~user ~repo
              )
-             all_repos
+             Dashboard_data.all_repos
          )
          >>= fun r_list ->
          quite_pretty_json ("[" ^ (String.concat ~sep:", " r_list) ^ "]")

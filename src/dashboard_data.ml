@@ -57,3 +57,15 @@ let repos_from_json_to_json =
          repo_list)
   ) in
   Yojson.Safe.pretty_to_string filtered
+
+let all_repos =
+  repo_list_from_json "data/repos.json"
+  |> (fun repo_list ->
+      List.map
+        ~f:(
+          fun repo ->
+            match repo with
+            | ((u_name, r_name), tags) -> (u_name, r_name)
+        )
+        repo_list
+    )
