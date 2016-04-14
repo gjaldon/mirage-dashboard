@@ -62,10 +62,6 @@ let all_repos ~repos_json_path =
   repo_list_from_json repos_json_path
   |> (fun repo_list ->
       List.map
-        ~f:(
-          fun repo ->
-            match repo with
-            | ((u_name, r_name), tags) -> (u_name, r_name)
-        )
+        ~f:fst
         repo_list
     )
