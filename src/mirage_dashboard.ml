@@ -46,7 +46,7 @@ let command =
     (fun cookie_name () ->
        Lwt_main.run (
          (
-           Lwt_list.map_s
+           Lwt_list.map_p
              (
                fun (user, repo) ->
                  get_release_async ~cookie_name ~user ~repo
