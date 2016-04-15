@@ -67,8 +67,8 @@ let latest_relese releases =
   then release_values (List.hd releases) total
   else (
       `Assoc [
-      ("name", `String "No release yet...");
-      ("total", `Int 0)
+        ("name", `String "No release yet...");
+        ("total", `Int 0)
       ]
     )
 

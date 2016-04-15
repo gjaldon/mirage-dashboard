@@ -20,7 +20,16 @@ let command =
            Lwt_list.map_p
              (
                fun (user, repo) ->
-                 Get_releases.get_current ~cookie_name ~user ~repo
+                 Get_releases.get_current ~cookie_name ~user ~repo >>=
+                 fun release ->
+                 return (
+                   `Assoc [
+                     ("repo", `String repo);
+                     ("user", `String user);
+                     ("release", release)
+                   ]
+                 )
+
              )
              (Dashboard_data.all_repos ~repos_json_path)
          )
