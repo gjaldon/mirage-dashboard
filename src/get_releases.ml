@@ -1,20 +1,21 @@
 open Lwt
 
 (**
-   "id": 3009723,
-    "tag_name": "",
-    "target_commitish": "",
-    "name": "",
-    "body": "",
-    "draft": false,
-    "prerelease": false,
-    "created_at": "2016-04-13T10:39:07Z",
-    "published_at": "2016-04-13T10:41:24Z",
-    "url": "https://api.github.com/...",
-    "html_url": "https://github.com/...",
-    "assets_url": "https://api.github.com/...",
-    "upload_url": "https://uploads.github.com/..."
-   *)
+ * example github release values
+ * "id": 3009723,
+ * "tag_name": "",
+ * "target_commitish": "",
+ * "name": "",
+ * "body": "",
+ * "draft": false,
+ * "prerelease": false,
+ * "created_at": "2016-04-13T10:39:07Z",
+ * "published_at": "2016-04-13T10:41:24Z",
+ * "url": "https://api.github.com/...",
+ * "html_url": "https://github.com/...",
+ * "assets_url": "https://api.github.com/...",
+ * "upload_url": "https://uploads.github.com/..."
+*)
 
 module G = Github
 module M = Github.Monad
