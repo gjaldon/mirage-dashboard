@@ -2,4 +2,4 @@ val get_current :
   cookie_name:string ->
   user:string ->
   repo:string ->
-  string Lwt.t
+  [> `Assoc of (string * [> `Int of int | `String of string ]) list ] Lwt.t

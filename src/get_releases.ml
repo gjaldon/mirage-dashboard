@@ -1,5 +1,21 @@
 open Lwt
 
+(**
+   "id": 3009723,
+    "tag_name": "",
+    "target_commitish": "",
+    "name": "",
+    "body": "",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2016-04-13T10:39:07Z",
+    "published_at": "2016-04-13T10:41:24Z",
+    "url": "https://api.github.com/...",
+    "html_url": "https://github.com/...",
+    "assets_url": "https://api.github.com/...",
+    "upload_url": "https://uploads.github.com/..."
+   *)
+
 module G = Github
 module M = Github.Monad
 
@@ -36,7 +52,7 @@ let release_values release total =
       "published_at"
       release_data
   ) in
-  Yojson.Safe.pretty_to_string (
+  (
     `Assoc [
       ("name", `String (strip_quotes (Yojson.Safe.to_string name)));
       ("published", `String (strip_quotes (Yojson.Safe.to_string published)));
@@ -48,7 +64,7 @@ let latest_relese releases =
   let total = List.length releases in
   if total > 0
   then release_values (List.hd releases) total
-  else Yojson.Safe.pretty_to_string (
+  else (
       `Assoc [
       ("name", `String "No release yet...");
       ("total", `Int 0)

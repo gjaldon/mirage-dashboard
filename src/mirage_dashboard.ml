@@ -25,7 +25,7 @@ let command =
              (Dashboard_data.all_repos ~repos_json_path)
          )
          >>= fun r_list ->
-         quite_pretty_json ("[" ^ (String.concat ~sep:", " r_list) ^ "]")
+         Yojson.pretty_to_string (`List r_list)
          |> Lwt_io.printf "%s\n"
        )
     )
