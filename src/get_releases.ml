@@ -15,7 +15,7 @@ let get_releases ~cookie_name ~user ~repo =
   >>= fun token ->
   get_releases_for_repo ~token ~user ~repo
 
-let release_to_list releases =
+let releases_to_list releases =
   G.(
     M.(
       run (
@@ -24,7 +24,7 @@ let release_to_list releases =
     )
   )
 
-let release_strings release_list =
+let releases_strings release_list =
   List.map (
     fun rel ->
       Github_j.string_of_release rel
@@ -35,9 +35,9 @@ let get_current ~cookie_name ~user ~repo =
       ~cookie_name
       ~user
       ~repo
-    >>= fun release ->
-        release_to_list release
-    >>= fun release_list ->
-        release_strings release_list
-    |> fun release_strings ->
-        return (first_release_str release_strings)
+    >>= fun releases ->
+        releases_to_list releases
+    >>= fun releases_list ->
+        releases_strings releases_list
+    |> fun releases_strings ->
+        return (first_release_str releases_strings)
