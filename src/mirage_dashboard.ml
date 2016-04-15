@@ -1,8 +1,6 @@
 open Core.Std
 open Lwt
 
-let quite_pretty_json s = Yojson.Safe.pretty_to_string (Yojson.Safe.from_string s)
-
 let spec =
   let open Command.Spec in
   empty
@@ -32,8 +30,8 @@ let command =
 
              )
              (Dashboard_data.all_repos ~repos_json_path)
-         )
-         >>= fun r_list ->
+         ) >>=
+         fun r_list ->
          Yojson.pretty_to_string (`List r_list)
          |> Lwt_io.printf "%s\n"
        )
