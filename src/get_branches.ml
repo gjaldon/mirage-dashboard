@@ -24,9 +24,7 @@ let extract_branch_name branch_str =
       "name"
       branch_data
   ) in (
-    `Assoc [
-      ("name", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)))
-    ]
+    `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name))
   )
 
 let get_branches ~cookie_name ~user ~repo =
