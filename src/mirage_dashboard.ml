@@ -18,13 +18,18 @@ let command =
            Lwt_list.map_p
              (
                fun (user, repo) ->
-                 Get_releases.get_current ~cookie_name ~user ~repo >>=
-                 fun release ->
+                 (Lwt_list.map_p
+                   (
+                     fun closure ->
+                       closure
+                   )
+                   [(Get_releases.get_current ~cookie_name ~user ~repo)]) >>=
+                 fun json_list ->
                  return (
                    `Assoc [
                      ("repo", `String repo);
                      ("user", `String user);
-                     ("release", release)
+                     ("detail", `List json_list)
                    ]
                  )
 
