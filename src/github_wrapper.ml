@@ -22,4 +22,16 @@ let login ~cookie_name =
 let get_token ~cookie_name =
   login ~cookie_name
   >>= fun code ->
-    return (G.Token.of_auth code)
+  return (G.Token.of_auth code)
+
+let stream_to_list stream =
+  G.(
+    M.(
+      run (
+        Stream.to_list stream
+      )
+    )
+  )
+
+let strip_quotes str = 
+  Str.global_replace (Str.regexp "\"") "" str

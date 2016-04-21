@@ -18,7 +18,6 @@ open Lwt
 *)
 
 module G = Github
-module M = Github.Monad
 
 let get_releases_for_repo ~token ~user ~repo =
   return (G.Release.for_repo ~token ~user ~repo ())
@@ -27,18 +26,6 @@ let get_releases ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   get_releases_for_repo ~token ~user ~repo
-
-let releases_to_list releases =
-  G.(
-    M.(
-      run (
-        Stream.to_list releases
-      )
-    )
-  )
-
-let strip_quotes str = 
-  Str.global_replace (Str.regexp "\"") "" str
 
 let release_values release total =
   let release_str = Github_j.string_of_release release in
@@ -55,8 +42,8 @@ let release_values release total =
   ) in
   (
     `Assoc [
-      ("name", `String (strip_quotes (Yojson.Safe.to_string name)));
-      ("published", `String (strip_quotes (Yojson.Safe.to_string published)));
+      ("name", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)));
+      ("published", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)));
       ("total", `Int total)
     ]
   )
@@ -78,6 +65,6 @@ let get_current ~cookie_name ~user ~repo =
       ~user
       ~repo
     >>= fun releases ->
-    releases_to_list releases
+    Github_wrapper.stream_to_list releases
     >>= fun releases_list ->
     return (latest_relese releases_list)

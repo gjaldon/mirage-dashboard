@@ -3,3 +3,11 @@
 val get_token :
   cookie_name:string ->
   Github.Token.t Lwt.t
+
+val stream_to_list :
+  'a Github.Stream.t ->
+  'a list Lwt.t
+
+val strip_quotes :
+  string ->
+  string

@@ -1,7 +1,12 @@
 open Lwt
 
+(**
+ * example branch values
+ * name :str
+ * commit : { sha: str, url: str}
+*)
+
 module G = Github
-module M = Github.Monad
 
 let get_branches_for_repo ~token ~user ~repo =
   return (G.Repo.branches ~token ~user ~repo ())
@@ -12,18 +17,6 @@ let get_branches_stream ~cookie_name ~user ~repo =
   >>= fun token ->
   get_branches_for_repo ~token ~user ~repo
 
-let stream_to_list stream =
-  G.(
-    M.(
-      run (
-        Stream.to_list stream
-      )
-    )
-  )
-
-let strip_quotes str = 
-  Str.global_replace (Str.regexp "\"") "" str
-
 let extract_branch_name branch_str =
   let branch_data = Yojson.Safe.from_string branch_str in
   let name = (
@@ -32,7 +25,7 @@ let extract_branch_name branch_str =
       branch_data
   ) in (
     `Assoc [
-      ("name", `String (strip_quotes (Yojson.Safe.to_string name)))
+      ("name", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)))
     ]
   )
 
@@ -42,7 +35,7 @@ let get_branches ~cookie_name ~user ~repo =
       ~user
       ~repo
     >>= fun stream ->
-    stream_to_list stream
+    Github_wrapper.stream_to_list stream
     >>= fun branches_list ->
     return (
       `List (
