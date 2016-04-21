@@ -1,6 +1,11 @@
 open Core.Std
 open Lwt
 
+let get_item_at_index json_list index =
+  match List.nth json_list index with
+  | Some item -> item
+  | None -> `String "not found"
+
 let spec =
   let open Command.Spec in
   empty
@@ -30,14 +35,8 @@ let command =
                      ]
                  ) >>=
                  fun json_list ->
-                 let current_release = match List.nth json_list 0 with
-                   | Some item -> item
-                   | None -> `String "no releases found"
-                 in
-                 let branches = match List.nth json_list 1 with
-                   | Some item -> item
-                   | None -> `String "no branches found"
-                 in
+                 let current_release = get_item_at_index json_list 0 in
+                 let branches = get_item_at_index json_list 1 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
