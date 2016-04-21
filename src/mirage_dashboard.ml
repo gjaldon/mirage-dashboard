@@ -30,11 +30,20 @@ let command =
                      ]
                  ) >>=
                  fun json_list ->
+                 let current_release = match List.nth json_list 0 with
+                   | Some item -> item
+                   | None -> `String "no releases found"
+                 in
+                 let branches = match List.nth json_list 1 with
+                   | Some item -> item
+                   | None -> `String "no branches found"
+                 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
                      ("user", `String user);
-                     ("detail", `List json_list)
+                     ("current_release", current_release);
+                     ("branches", branches)
                    ]
                  )
 
