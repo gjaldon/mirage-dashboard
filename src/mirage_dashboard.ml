@@ -31,18 +31,21 @@ let command =
                      )
                      [
                        (Get_releases.get_current ~cookie_name ~user ~repo);
-                       (Get_branches.get_branches ~cookie_name ~user ~repo)
+                       (Get_branches.get_branches ~cookie_name ~user ~repo);
+                       (Get_events.get_events ~cookie_name ~user ~repo)
                      ]
                  ) >>=
                  fun json_list ->
                  let current_release = get_item_at_index json_list 0 in
                  let branches = get_item_at_index json_list 1 in
+                 let events = get_item_at_index json_list 2 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
                      ("user", `String user);
                      ("current_release", current_release);
-                     ("branches", branches)
+                     ("branches", branches);
+                     ("events", events)
                    ]
                  )
 
