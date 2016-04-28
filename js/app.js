@@ -25,6 +25,7 @@
                                     item.current_release.published ?
                                         item.current_release.published : ''
                                 ].join(' ')
+                            ]
                         ]
                     ];
                 })
