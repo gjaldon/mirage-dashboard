@@ -1,0 +1,241 @@
+[
+  {
+    "repo": "ocaml-xenstore-xen",
+    "user": "djs55",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "cstruct", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-dnssec",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-crc",
+    "user": "xapi-project",
+    "current_release": {
+      "name": "v1.0.0",
+      "published": "2016-04-28T14:18:59Z",
+      "total": 2
+    },
+    "branches": [ "master", "release-0.9.9" ],
+    "events": {
+      "johnelse": 23,
+      "hannesm": 9,
+      "coveralls": 8,
+      "simonjbeaumont": 3,
+      "euanh": 2,
+      "yomimono": 2
+    }
+  },
+  {
+    "repo": "ocaml-device-mapper",
+    "user": "djs55",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "topkg",
+    "user": "dbuenzli",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "dbuenzli": 43, "Khady": 3, "fdopen": 2 }
+  },
+  {
+    "repo": "ocaml-ec2",
+    "user": "moonlightdrive",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "s3" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-bench",
+    "user": "MagnusS",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "nsdi15-cr" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-trace-viewer",
+    "user": "talex5",
+    "current_release": {
+      "name": "0.2",
+      "published": "2015-06-08T09:54:25Z",
+      "total": 2
+    },
+    "branches": [ "combined", "gh-pages", "master", "signal" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-libmacaroons",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-mimic",
+    "user": "MagnusS",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "dev", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-ntp",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "io-page.1.3+", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ISO8601.ml",
+    "user": "sagotch",
+    "current_release": {
+      "name": "0.2.4",
+      "published": "2015-05-14T08:20:24Z",
+      "total": 9
+    },
+    "branches": [ "duration", "gh-pages", "master", "test" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-dns-examples",
+    "user": "heidi-ann",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "tower",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-vnetif",
+    "user": "MagnusS",
+    "current_release": {
+      "name": "0.1",
+      "published": "2015-04-30T15:02:35Z",
+      "total": 1
+    },
+    "branches": [ "lwt-pause", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "trails",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "garpjitsu",
+    "user": "MagnusS",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-stats-demo",
+    "user": "MagnusS",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "blueprint",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "irmin-indexeddb",
+    "user": "talex5",
+    "current_release": {
+      "name": "v0.3",
+      "published": "2015-10-15T09:03:25Z",
+      "total": 3
+    },
+    "branches": [
+      "b2", "branch_id", "demo", "git-format", "master", "new-irmin-api"
+    ],
+    "events": { "vasilisp": 5, "talex5": 4 }
+  },
+  {
+    "repo": "irminfs",
+    "user": "dsheets",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "branchname-bug", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "opam-bulk-build-ui",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "demo", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "qubes-test-mirage",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "js-skeleton",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "fxfactorial": 2 }
+  },
+  {
+    "repo": "irmin-www",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "new-irmin-api", "new_irmin_api" ],
+    "events": {}
+  },
+  {
+    "repo": "irmin-js",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "new-irmin-api", "travis" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-oram",
+    "user": "ruhatch",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "ruhatch": 75, "dsheets": 3 }
+  },
+  {
+    "repo": "irmin-filer",
+    "user": "talex5",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "fpath",
+    "user": "dbuenzli",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "dbuenzli": 31, "dsheets": 2 }
+  },
+  {
+    "repo": "carcass",
+    "user": "dbuenzli",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "dbuenzli": 11, "samoht": 5 }
+  }
+]

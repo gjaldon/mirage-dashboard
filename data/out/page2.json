@@ -1,0 +1,337 @@
+[
+  {
+    "repo": "orm",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "mvalle": 2 }
+  },
+  {
+    "repo": "dyntype",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "rgrinberg": 2 }
+  },
+  {
+    "repo": "mirage-tutorial",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-dns",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.18.1",
+      "published": "2016-04-17T18:43:27Z",
+      "total": 19
+    },
+    "branches": [ "heidi-ann-master", "master" ],
+    "events": {
+      "djs55": 26,
+      "avsm": 10,
+      "dsheets": 3,
+      "carriercomm": 2,
+      "patgithub": 2
+    }
+  },
+  {
+    "repo": "ocaml-tar",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.5.0",
+      "published": "2016-04-24T16:55:19Z",
+      "total": 5
+    },
+    "branches": [ "master" ],
+    "events": { "djs55": 15 }
+  },
+  {
+    "repo": "ocaml-cow",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.4.0",
+      "published": "2015-09-27T18:01:27Z",
+      "total": 16
+    },
+    "branches": [ "gh-pages", "labeled-arg-antiquot", "master" ],
+    "events": {
+      "samoht": 50,
+      "tbrk": 10,
+      "dsheets": 8,
+      "Drup": 4,
+      "avsm": 4,
+      "chrismamo1": 2
+    }
+  },
+  {
+    "repo": "ocaml-xenstore",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.3.0",
+      "published": "2016-03-14T22:21:51Z",
+      "total": 2
+    },
+    "branches": [
+      "1.2-experimental", "experimental", "master", "ocplib-endian",
+      "pre-repo-transfer", "xen-build"
+    ],
+    "events": { "djs55": 25, "euanh": 8, "robhoes": 3 }
+  },
+  {
+    "repo": "ocaml-crunch",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.4.1",
+      "published": "2016-02-17T17:00:44Z",
+      "total": 10
+    },
+    "branches": [ "master" ],
+    "events": { "samoht": 6, "talex5": 3, "avsm": 3 }
+  },
+  {
+    "repo": "cowabloga",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.1.0",
+      "published": "2016-03-12T15:51:57Z",
+      "total": 10
+    },
+    "branches": [ "master" ],
+    "events": { "samoht": 15 }
+  },
+  {
+    "repo": "ocaml-ipaddr",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.0.0",
+      "published": "2013-12-08T22:17:25Z",
+      "total": 1
+    },
+    "branches": [
+      "macaddr-local", "master", "netmask", "safe-string", "travis-4.02",
+      "travis-fix", "travis", "unix-support", "v6_netmask", "v6"
+    ],
+    "events": { "dsheets": 15 }
+  },
+  {
+    "repo": "mirage-decks",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.9.4",
+      "published": "2013-12-24T11:22:10Z",
+      "total": 1
+    },
+    "branches": [
+      "cl-mirage20", "master", "oscon14-presentation", "qcon13",
+      "xensummit13"
+    ],
+    "events": {}
+  },
+  {
+    "repo": "io-page",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.6.0",
+      "published": "2016-03-03T11:07:34Z",
+      "total": 10
+    },
+    "branches": [ "master" ],
+    "events": { "djs55": 8, "avsm": 4, "samoht": 2 }
+  },
+  {
+    "repo": "mirage-clock",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.1",
+      "published": "2016-01-05T16:20:34Z",
+      "total": 3
+    },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-console",
+    "user": "mirage",
+    "current_release": {
+      "name": "v2.1.3",
+      "published": "2015-03-08T23:00:54Z",
+      "total": 9
+    },
+    "branches": [ "master" ],
+    "events": { "talex5": 5 }
+  },
+  {
+    "repo": "shared-block-ring",
+    "user": "mirage",
+    "current_release": {
+      "name": "v2.2.0",
+      "published": "2016-04-22T15:47:25Z",
+      "total": 7
+    },
+    "branches": [ "master", "v1.1.1" ],
+    "events": { "jonludlam": 6 }
+  },
+  {
+    "repo": "mirage-net-unix",
+    "user": "mirage",
+    "current_release": {
+      "name": "v2.2.2",
+      "published": "2015-06-08T01:11:31Z",
+      "total": 7
+    },
+    "branches": [ "master", "v2-set-mac" ],
+    "events": { "talex5": 3, "djs55": 2 }
+  },
+  {
+    "repo": "ezjsonm",
+    "user": "mirage",
+    "current_release": {
+      "name": "0.4.1",
+      "published": "2015-02-04T14:58:54Z",
+      "total": 6
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-gnt",
+    "user": "mirage",
+    "current_release": {
+      "name": "v2.2.2",
+      "published": "2016-01-28T13:57:18Z",
+      "total": 10
+    },
+    "branches": [ "master" ],
+    "events": { "talex5": 2 }
+  },
+  {
+    "repo": "mirage-block-volume",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.12.0",
+      "published": "2015-07-23T15:37:09Z",
+      "total": 6
+    },
+    "branches": [ "master", "release-0.9.2", "release.0.10.0" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-xenstore-server",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "jitsu",
+    "user": "mirage",
+    "current_release": {
+      "name": "0.3.0",
+      "published": "2015-11-11T16:34:08Z",
+      "total": 4
+    },
+    "branches": [ "dev", "master", "sign", "xenlight" ],
+    "events": { "jrelo": 2, "daehyeok": 2 }
+  },
+  {
+    "repo": "ocaml-hex",
+    "user": "mirage",
+    "current_release": {
+      "name": "1.0.0",
+      "published": "2015-10-14T16:31:56Z",
+      "total": 3
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-bootvar-xen",
+    "user": "mirage",
+    "current_release": {
+      "name": "0.3.1",
+      "published": "2016-02-07T21:23:06Z",
+      "total": 4
+    },
+    "branches": [ "master" ],
+    "events": {
+      "MagnusS": 7,
+      "jonludlam": 6,
+      "talex5": 2,
+      "jsianes": 2,
+      "dbuenzli": 2,
+      "djs55": 2
+    }
+  },
+  {
+    "repo": "mirage-flow",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.1.0",
+      "published": "2016-01-27T14:32:26Z",
+      "total": 5
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": { "samoht": 3 }
+  },
+  {
+    "repo": "mirage-seal",
+    "user": "mirage",
+    "current_release": {
+      "name": "0.4.2",
+      "published": "2015-08-05T09:11:00Z",
+      "total": 7
+    },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "mini-os",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "xen-stable-4.6" ],
+    "events": { "avsm": 2, "carriercomm": 2 }
+  },
+  {
+    "repo": "irmin-chunk",
+    "user": "mirage",
+    "current_release": {
+      "name": "1.0.0",
+      "published": "2015-10-01T09:26:18Z",
+      "total": 1
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "irmin-krypto",
+    "user": "mirage",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-launchd",
+    "user": "mirage",
+    "current_release": {
+      "name": "v1.2",
+      "published": "2016-01-14T11:56:36Z",
+      "total": 3
+    },
+    "branches": [ "gh-pages", "master", "release.1.0", "release.1.2" ],
+    "events": {}
+  },
+  {
+    "repo": "mirage-block-ramdisk",
+    "user": "mirage",
+    "current_release": {
+      "name": "v0.1",
+      "published": "2015-11-03T15:12:06Z",
+      "total": 1
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  }
+]

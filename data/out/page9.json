@@ -1,0 +1,256 @@
+[
+  {
+    "repo": "ocaml-openflow",
+    "user": "crotsos",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [
+      "cstruct", "develop", "feature/fix-unix-direct",
+      "feature/floodlight-flowvisor", "feature/xen-backend", "master",
+      "mirage-synch", "release/0.2", "signpostd", "xen-test"
+    ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-crypto-keys",
+    "user": "crotsos",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-pttcp",
+    "user": "crotsos",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "hadoop_model", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "sdnsim-build",
+    "user": "crotsos",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-vcard",
+    "user": "vbmithr",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "sdnsim",
+    "user": "crotsos",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master", "testing" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-smtp",
+    "user": "vbmithr",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-crypt",
+    "user": "vbmithr",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-raft",
+    "user": "heidi-ann",
+    "current_release": {
+      "name": "v1.0",
+      "published": "2014-11-14T14:13:48Z",
+      "total": 1
+    },
+    "branches": [
+      "attempt1", "attempt2", "attempt3", "iter-dev", "master",
+      "old_master_backup", "simulator"
+    ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-imap",
+    "user": "nojb",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [
+      "WIP", "cps-parser", "delete-command", "err_context",
+      "fix-body-sec-parse", "fix-empty-outbuf",
+      "fix-fetch-cmd-trailing-space", "fix-literal-read-off-by-one",
+      "fix-mime-docs", "gh-pages", "master", "mixed-style-parser",
+      "mutable-state"
+    ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-bt",
+    "user": "nojb",
+    "current_release": {
+      "name": "v0.2",
+      "published": "2014-05-10T23:59:14Z",
+      "total": 2
+    },
+    "branches": [
+      "WIP", "WIP2", "kadem-rewrite", "master", "refactor", "test-refactor"
+    ],
+    "events": { "frr149": 2 }
+  },
+  {
+    "repo": "ocamlatom",
+    "user": "amirmc",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "imaplet",
+    "user": "gregtatcam",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "feedmerge",
+    "user": "amirmc",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "imaplet-lwt",
+    "user": "gregtatcam",
+    "current_release": {
+      "name": "v0.1.15",
+      "published": "2015-10-13T12:42:32Z",
+      "total": 16
+    },
+    "branches": [ "master" ],
+    "events": { "gregtatcam": 7 }
+  },
+  {
+    "repo": "ocaml-ircd",
+    "user": "nojb",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "xen-urandom-proxy",
+    "user": "nojb",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "fosdemo",
+    "user": "amirmc",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-macaroons",
+    "user": "nojb",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "zarith-big-int",
+    "user": "nojb",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "nojb": 2 }
+  },
+  {
+    "repo": "rwe-dns-server",
+    "user": "heidi-ann",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "coracle",
+    "user": "consensus-oracle",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-fix",
+    "user": "vbmithr",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "ocaml-dtc",
+    "user": "vbmithr",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "vbmithr": 11 }
+  },
+  {
+    "repo": "mirage-ntp",
+    "user": "matildah",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "matildah": 62 }
+  },
+  {
+    "repo": "ircd-scylla",
+    "user": "ahf",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "develop" ],
+    "events": {}
+  },
+  {
+    "repo": "angstrom",
+    "user": "inhabitedtype",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {
+      "seliopou": 38,
+      "latticetower": 10,
+      "yallop": 4,
+      "rgrinberg": 3
+    }
+  },
+  {
+    "repo": "ocaml-aws",
+    "user": "inhabitedtype",
+    "current_release": {
+      "name": "aws-1.0.2",
+      "published": "2016-03-27T21:54:33Z",
+      "total": 4
+    },
+    "branches": [ "master" ],
+    "events": {
+      "seliopou": 119,
+      "fxfactorial": 5,
+      "hcarty": 3,
+      "michipili": 2,
+      "sgrove": 2,
+      "pwbs": 2,
+      "samoht": 2
+    }
+  },
+  {
+    "repo": "mirage-btrees",
+    "user": "ruhatch",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "ruhatch": 19 }
+  },
+  {
+    "repo": "ocaml-lru-cache",
+    "user": "zoggy",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "zoggy": 20, "hannesm": 10, "samoht": 2 }
+  }
+]
