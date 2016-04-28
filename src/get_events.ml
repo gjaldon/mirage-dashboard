@@ -40,7 +40,7 @@ let extract_user event_str =
   )
 
 
-let rec count_users user_list user_name =
+let rec count_user user_list user_name =
   match user_list with
   | [] -> [(user_name, 1)]
   | (u_name, i) :: tl ->
@@ -48,9 +48,29 @@ let rec count_users user_list user_name =
     then
       (u_name, i + 1) :: tl
     else
-      (u_name, i) :: count_users tl user_name
+      (u_name, i) :: count_user tl user_name
 
-let get_events ~cookie_name ~user ~repo =
+let count_users all_users =
+  List.fold
+    ~init: []
+    ~f:(
+      fun accum user ->
+        count_user accum user
+    )
+    all_users
+
+let user_counts_to_json user_list =
+  `Assoc (
+    List.map
+      ~f:(
+        fun user_tuple ->
+          let (name, count) = user_tuple in
+          (name, `Int count)
+      )
+      user_list
+  )
+
+let get_events_per_user ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   return (Github.Event.for_repo ~token ~user ~repo ())
@@ -58,12 +78,12 @@ let get_events ~cookie_name ~user ~repo =
   Github_wrapper.stream_to_list stream
   >>= fun events_list ->
   return (
-    `List (
-      List.map 
-        ~f:(
-          fun event ->
-            extract_type_and_user_name (Github_j.string_of_event event)
-        )
-        events_list
-    )
+    List.map 
+      ~f:(
+        fun event ->
+          extract_user (Github_j.string_of_event event)
+      )
+      events_list
+    |> count_users
+    |> user_counts_to_json
   )

@@ -32,7 +32,7 @@ let command =
                      [
                        (Get_releases.get_current ~cookie_name ~user ~repo);
                        (Get_branches.get_branches ~cookie_name ~user ~repo);
-                       (Get_events.get_events ~cookie_name ~user ~repo)
+                       (Get_events.get_events_per_user ~cookie_name ~user ~repo)
                      ]
                  ) >>=
                  fun json_list ->
