@@ -422,7 +422,7 @@
       "total": 8
     },
     "branches": [ "master" ],
-    "events": { "djs55": 9, "talex5": 4 }
+    "events": { "djs55": 8, "talex5": 4 }
   },
   {
     "repo": "ocaml-qcow",
@@ -467,7 +467,7 @@
     },
     "branches": [ "add-coverage", "gh-pages", "master" ],
     "events": {
-      "djs55": 72,
+      "djs55": 70,
       "talex5": 7,
       "dsheets": 6,
       "samoht": 2,

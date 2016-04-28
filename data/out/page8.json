@@ -12,11 +12,11 @@
     ],
     "events": {
       "yallop": 121,
-      "coveralls": 15,
+      "coveralls": 16,
       "whitequark": 8,
       "orbitz": 8,
-      "dsheets": 6,
       "rleonid": 5,
+      "dsheets": 5,
       "seliopou": 3,
       "drbo": 2,
       "simonjbeaumont": 2
@@ -190,7 +190,7 @@
     "current_release": { "name": "No release yet...", "total": 0 },
     "branches": [ "master" ],
     "events": {
-      "rudenoise": 96,
+      "rudenoise": 98,
       "hannesm": 6,
       "avsm": 3,
       "amirmc": 3,

@@ -677,7 +677,7 @@
       "master"
     ],
     "events": {
-      "djs55": 9,
+      "djs55": 8,
       "talex5": 4
     }
   },
@@ -744,7 +744,7 @@
       "master"
     ],
     "events": {
-      "djs55": 72,
+      "djs55": 70,
       "talex5": 7,
       "dsheets": 6,
       "samoht": 2,
@@ -2694,8 +2694,8 @@
       "master"
     ],
     "events": {
-      "dbuenzli": 3,
-      "cakeplus": 3
+      "dbuenzli": 2,
+      "cakeplus": 2
     }
   },
   {
@@ -3538,11 +3538,11 @@
     ],
     "events": {
       "yallop": 121,
-      "coveralls": 15,
+      "coveralls": 16,
       "whitequark": 8,
       "orbitz": 8,
-      "dsheets": 6,
       "rleonid": 5,
+      "dsheets": 5,
       "seliopou": 3,
       "drbo": 2,
       "simonjbeaumont": 2
@@ -3844,7 +3844,7 @@
       "master"
     ],
     "events": {
-      "rudenoise": 96,
+      "rudenoise": 98,
       "hannesm": 6,
       "avsm": 3,
       "amirmc": 3,
