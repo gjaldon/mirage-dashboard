@@ -64,16 +64,16 @@ git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 Use the app (with its extremely limited form):
 
 ```sh
-./mirage_dashboard.native -c mirage-dashboard -r data/repos.json | jq '[.[]
+./mirage_dashboard.native -c mirage-dashboard -r data/repos_from_trove.json | jq '[.[]
 ```
 
 ## TO DO:
 
-* Crawl dependencies
 * Create web-accessible HTML/JS dashboard (static)
 * Wrap in Mirage Unikernel
-* Cache data to limit GitHub API calls
 * Serve publicly
+* handle rate limit from API
+* Cache data to limit GitHub API calls
 
 ## Done:
 
@@ -82,6 +82,7 @@ Use the app (with its extremely limited form):
 * Dump data to JSON
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
   gather basic data about the _MirageOS_ ecosystem.
+* Crawl dependencies
 
 ## Sources of inspiration/theft:
 
