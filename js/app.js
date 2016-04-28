@@ -13,7 +13,7 @@
                 data.repos.map(function (item) {
                     return [
                         'li',
-                        ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo],
+                        ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                         ['ul',
                             ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
                             [
