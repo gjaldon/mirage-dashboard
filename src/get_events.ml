@@ -1,10 +1,15 @@
 open Lwt
+open Core.Std
 
 (*
    * example data
    * https://api.github.com/repos/mirage/mirage/events
    *
    *)
+
+let clean_str json_str =
+  Github_wrapper.strip_quotes (Yojson.Safe.to_string json_str)
+
 
 let extract_type_and_user_name event_str =
   let event_data = Yojson.Safe.from_string event_str in
@@ -21,12 +26,21 @@ let extract_type_and_user_name event_str =
   let actor = (Yojson.Safe.Util.member "actor" event_data) in
   let user_name = (Yojson.Safe.Util.member "login" actor) in (
     `Assoc [
-      ("type", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string event_type)));
-      ("user", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string user_name)));
-      ("date", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string event_date)))
+      ("type", `String (clean_str event_type));
+      ("user", `String (clean_str user_name));
+      ("date", `String (clean_str event_date))
     ]
-    
   )
+
+let rec count_users user_list user_name =
+  match user_list with
+  | [] -> [(user_name, 1)]
+  | (u_name, i) :: tl ->
+    if u_name = user_name
+    then
+      (u_name, i + 1) :: tl
+    else
+      (u_name, i) :: count_users tl user_name
 
 let get_events ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
@@ -38,7 +52,7 @@ let get_events ~cookie_name ~user ~repo =
   return (
     `List (
       List.map 
-        (
+        ~f:(
           fun event ->
             extract_type_and_user_name (Github_j.string_of_event event)
         )
