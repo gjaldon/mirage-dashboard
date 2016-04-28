@@ -17,6 +17,7 @@
                     repos: JSON.parse(xhr.responseText),
                     arrived: (new Date()).toJSON()
                 };
+                console.log(resObj);
             } else {
                 console.error(xhr.status);
             }
