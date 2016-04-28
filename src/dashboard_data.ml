@@ -36,28 +36,6 @@ let repo_list_from_json file_path =
       repo_list
   )
 
-let repos_from_json_to_json =
-  let repos_data = Yojson.Safe.from_file "data/repos.json" in
-  let repo_list = repos_data |> Yojson.Safe.Util.to_list in
-  let filtered = (
-    `List
-      (List.map
-         ~f: (fun item ->
-             `Assoc [
-               (
-                 "repo",
-                 (
-                   Yojson.Safe.Util.member
-                     "repo"
-                     item
-                 )
-               );
-               ("thing", `String "test")
-             ])
-         repo_list)
-  ) in
-  Yojson.Safe.pretty_to_string filtered
-
 let all_repos ~repos_json_path =
   repo_list_from_json repos_json_path
   |> (fun repo_list ->
