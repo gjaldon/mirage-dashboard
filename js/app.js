@@ -15,7 +15,16 @@
                         'li',
                         item.repo,
                         ['ul',
-                            ['li', 'By: ' + item.user ]
+                            ['li', 'By: ' + item.user ],
+                            [
+                                'li',
+                                [
+                                    'Current Release:',
+                                    item.current_release.name,
+                                    '-',
+                                    item.current_release.published ?
+                                        item.current_release.published : ''
+                                ].join(' ')
                         ]
                     ];
                 })
