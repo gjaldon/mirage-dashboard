@@ -7,5 +7,28 @@
     <body>
         <h1>MirageOS Dashboard</h1>
     </body>
+    <script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        var resObj;
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                resObj = {
+                    repos: JSON.parse(xhr.responseText),
+                    arrived: (new Date()).toJSON()
+                };
+            } else {
+                console.error(xhr.status);
+            }
+        }
+    };
+    function getData() {
+        endpoint = '/data/out/all.json';
+        console.log('GET', endpoint);
+        xhr.open('GET', endpoint, true);
+        xhr.send();
+    }
+    getData();
+    </script>
 </html>
 
