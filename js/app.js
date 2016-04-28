@@ -7,14 +7,16 @@
         xhr.send();
     }
     function printData(data) {
-        var app = document.getElementById('app');
-        app.appendChild(lmd([
-            'ul', [
-                data.repos.map(function (repo) {
-                    return ['li', repo.name];
-                })
-            ]
-        ]));
+        var app = document.getElementById('app'),
+            markupArr = [
+                'ul', [
+                    data.repos.map(function (repo) {
+                        return ['li', repo.name];
+                    })
+                ]
+            ];
+        console.log(markupArr);
+        app.appendChild(lmd(markupArr);
     }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
