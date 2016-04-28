@@ -36,6 +36,10 @@
                                     }
                                     return rtn;
                                 }())]
+                            ],
+                            [
+                                'li',
+                                'Branches: ' + item.branches.length
                             ]
                         ]
                     ];
