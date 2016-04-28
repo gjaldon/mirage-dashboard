@@ -32,6 +32,14 @@ let extract_type_and_user_name event_str =
     ]
   )
 
+let extract_user event_str =
+  let event_data = Yojson.Safe.from_string event_str in
+  let actor = (Yojson.Safe.Util.member "actor" event_data) in
+  let user_name = (Yojson.Safe.Util.member "login" actor) in (
+    clean_str user_name
+  )
+
+
 let rec count_users user_list user_name =
   match user_list with
   | [] -> [(user_name, 1)]
