@@ -10,8 +10,14 @@
         var app = document.getElementById('app'),
             markupArr = [
                 'ul',
-                data.repos.map(function (repo) {
-                    return ['li', repo.name];
+                data.repos.map(function (item) {
+                    return [
+                        'li',
+                        item.repo,
+                        ['ul',
+                            ['li', 'By: ' + item.user ]
+                        ]
+                    ];
                 })
             ];
         console.log(markupArr);
