@@ -10,5 +10,6 @@ for PAGE in $(seq 1 $END); do
     sleep 30
 done
 
+jq -s add data/in/mirage_bot_page*.json > data/in/all.json
 jq -s add data/out/page*.json > data/out/all.json
 
