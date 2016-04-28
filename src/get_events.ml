@@ -70,6 +70,25 @@ let user_counts_to_json user_list =
       user_list
   )
 
+let sort_desc events_per_user =
+  List.sort
+    ~cmp:(
+      fun a b ->
+        let (_, a_count) = a in
+        let (__name, b_count) = b in
+        if a_count < b_count then 1 else 0
+    )
+    events_per_user
+
+let remove_watchers events_per_user =
+  List.filter
+    ~f:(
+      fun user_event_count ->
+        let (_, count) = user_event_count in
+        count > 1
+    )
+    events_per_user
+
 let get_events_per_user ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
@@ -85,5 +104,7 @@ let get_events_per_user ~cookie_name ~user ~repo =
       )
       events_list
     |> count_users
+    |> remove_watchers
+    |> sort_desc
     |> user_counts_to_json
   )
