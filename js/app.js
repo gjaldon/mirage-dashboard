@@ -25,6 +25,17 @@
                                     item.current_release.published ?
                                         item.current_release.published : ''
                                 ].join(' ')
+                            ],
+                            [
+                                'li',
+                                'Contributors',
+                                ['ul', (function () {
+                                    var k, rtn = [];
+                                    for (k in item.events) {
+                                        rtn.push(['li', k])
+                                    }
+                                    return rtn;
+                                }())]
                             ]
                         ]
                     ];
