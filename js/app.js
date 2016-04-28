@@ -10,7 +10,9 @@
         var app = document.getElementById('app');
         app.appendChild(lmd([
             'ul', [
-                ['li', 'repos here...']
+                data.repos.map(function (repo) {
+                    return ['li', repo.name];
+                })
             ]
         ]));
     }
