@@ -1,0 +1,182 @@
+[
+  {
+    "repo": "crotsos/ocaml-openflow",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "crotsos/ocaml-crypto-keys",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "crotsos/ocaml-pttcp",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "crotsos/sdnsim-build",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "vbmithr/ocaml-vcard",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "crotsos/sdnsim",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "vbmithr/ocaml-smtp",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "vbmithr/ocaml-crypt",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "heidi-ann/ocaml-raft",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/ocaml-imap",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/ocaml-bt",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "amirmc/ocamlatom",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "gregtatcam/imaplet",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "amirmc/feedmerge",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "gregtatcam/imaplet-lwt",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/ocaml-ircd",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/xen-urandom-proxy",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "amirmc/fosdemo",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/ocaml-macaroons",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "nojb/zarith-big-int",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "heidi-ann/rwe-dns-server",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "consensus-oracle/coracle",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "vbmithr/ocaml-fix",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "vbmithr/ocaml-dtc",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "matildah/mirage-ntp",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "ahf/ircd-scylla",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "inhabitedtype/angstrom",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "inhabitedtype/ocaml-aws",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "ruhatch/mirage-btrees",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "zoggy/ocaml-lru-cache",
+    "tags": [
+      "fromMirageBot"
+    ]
+  }
+]

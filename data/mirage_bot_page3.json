@@ -1,0 +1,182 @@
+[
+  {
+    "repo": "mirage/ocaml-rpc",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-fat",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-fs",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/xenbigarray",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-tuntap",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/xen-disk",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-mbr",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-mstruct",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-lazy-trie",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-evtchn",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-vagrant-vms",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/merge-queues",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-bloom-filters",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-entropy",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-xen-minios",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-base64",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-openflow",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/synjitsu",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/merge-ropes",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-tc",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-net-macosx",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/xentropyd",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/ocaml-magic-mime",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/cuekeeper",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-perf",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "mirage/mirage-channel",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/mirage-logs",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/mirage-qubes",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/qubes-mirage-skeleton",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/qubes-mirage-firewall",
+    "tags": [
+      "fromMirageBot"
+    ]
+  }
+]

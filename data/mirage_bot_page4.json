@@ -1,0 +1,182 @@
+[
+  {
+    "repo": "djs55/ocaml-xenstore-clients",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/xenopsd-previous",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/message-switch",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/xcp-idl",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-vhd",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "dsheets/ocaml-sodium",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-vnc",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "dsheets/profuse",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "ocamllabs/opamfu",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/cloudstack-dev-vms",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-cloudstack",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "talex5/openlibm",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "ocamllabs/2048-tutorial",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/xe-unikernel-upload",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/example-unikernels",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/xapi-database",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocfs2-tools",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-gpt",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/simple-nat",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/mirage-nat",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/arbitrary-network",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/mirage-net-pcap",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/irmin-arp",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "ocamllabs/ocaml-scry",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "oklm-wsh/Decompress",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-c3",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/ocaml-certify",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "qlai/ocaml-rand",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "yomimono/irmin-network-datastores",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "djs55/ocaml-btree",
+    "tags": [
+      "fromMirageBot"
+    ]
+  }
+]
