@@ -1,0 +1,294 @@
+[
+    {
+        "repo": "avsm/ezxmlm",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "djs55/ocaml-xenstore-clients",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "magnuss/mirage-mimic",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/alcotest",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/cowabloga",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/dyntype",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ezjsonm",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/functoria",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/io-page",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/irmin",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/irmin-chunk",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/jitsu",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/merge-queues",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/merge-ropes",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-block-unix",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-block-volume",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-block-xen",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-bootvar-xen",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-channel",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-clock",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-console",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-decks",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-entropy",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-flow",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-fs-unix",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-http",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-net-macosx",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-net-unix",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-net-xen",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-platform",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-profile",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-seal",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-skeleton",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-tc",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-tcpip",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-vagrant-vms",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "MagnusS/mirage-vnetif",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-www",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/mirage-xen-minios",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-cohttp",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-conduit",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-cow",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-crunch",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-cstruct",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-dns",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-fat",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-git",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-github",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-hex",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-ipaddr",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-lazy-trie",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-magic-mime",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-mbr",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-mstruct",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-pcap",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-tar",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-tuntap",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-uri",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-vchan",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-vmnet",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/ocaml-xenstore",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/shared-memory-ring",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/synjitsu",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirage/xen-disk",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirleft/ocaml-asn1-combinators",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirleft/ocaml-nocrypto",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirleft/ocaml-tls",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mirleft/ocaml-x509",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "mor1/ocaml-tftp",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "ocamllabs/ocaml-ctypes",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "talex5/mirage-trace-viewer",
+        "tags": ["fromTROVE"]
+    },
+    {
+        "repo": "yomimono/mirage-nat",
+        "tags": ["fromTROVE"]
+    }
+]
