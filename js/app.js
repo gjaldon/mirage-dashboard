@@ -1,5 +1,19 @@
 (function () {
     'use strict';
+    function getData() {
+        var endpoint = '/mirage-dashboard/data/out/all.json';
+        console.log('GET', endpoint);
+        xhr.open('GET', endpoint, true);
+        xhr.send();
+    }
+    function printData(data) {
+        var app = document.getElementById('app');
+        app.appendChild(lmd([
+            'ul', [
+                ['li', 'repos here...']
+            ]
+        ]));
+    }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         var resObj;
@@ -9,17 +23,11 @@
                     repos: JSON.parse(xhr.responseText),
                     arrived: (new Date()).toJSON()
                 };
-                console.log(resObj);
+                printData(resObj);
             } else {
                 console.error(xhr.status);
             }
         }
     };
-    function getData() {
-        endpoint = '/mirage-dashboard/data/out/all.json';
-        console.log('GET', endpoint);
-        xhr.open('GET', endpoint, true);
-        xhr.send();
-    }
     getData();
 }());
