@@ -16,7 +16,7 @@
                 ]
             ];
         console.log(markupArr);
-        app.appendChild(lmd(markupArr);
+        app.appendChild(lmd(markupArr));
     }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
