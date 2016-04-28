@@ -75,7 +75,7 @@ let sort_desc events_per_user =
     ~cmp:(
       fun a b ->
         let (_, a_count) = a in
-        let (__name, b_count) = b in
+        let (_, b_count) = b in
         if a_count < b_count then 1 else 0
     )
     events_per_user
