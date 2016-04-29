@@ -10,7 +10,7 @@
         var app = document.getElementById('app'),
             markupArr = [
                 'div',
-                { class: 'container' },
+                { class: 'container repos' },
                 data.repos.map(function (item) {
                     return [
                         'div',
