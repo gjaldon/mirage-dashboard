@@ -52,6 +52,7 @@ body {
 }
 .jumbotron.repo {
   text-align: left;
+  padding-right: 30px;
   background: #e6ffe6;
 }
 
