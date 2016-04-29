@@ -9,23 +9,25 @@
     function printData(data) {
         var app = document.getElementById('app'),
             markupArr = [
-                'ul',
+                'div',
+                { class: 'container' }
                 data.repos.map(function (item) {
                     return [
-                        'li',
+                        'div',
+                        { class: 'container' }
                         ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
+                        [
+                            'h3',
+                            [
+                                'Current Release:',
+                                item.current_release.name,
+                                '-',
+                                item.current_release.published ?
+                                    item.current_release.published : ''
+                            ].join(' ')
+                        ],
                         ['ul',
                             ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
-                            [
-                                'li',
-                                [
-                                    'Current Release:',
-                                    item.current_release.name,
-                                    '-',
-                                    item.current_release.published ?
-                                        item.current_release.published : ''
-                                ].join(' ')
-                            ],
                             [
                                 'li',
                                 'Contributors',
