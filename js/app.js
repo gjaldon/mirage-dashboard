@@ -16,32 +16,38 @@
                         'div',
                         { class: 'jumbotron repo' },
                         ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
-                        [
-                            'h3',
-                            [
-                                'Current Release:',
-                                item.current_release.name,
-                                '-',
-                                item.current_release.published ?
-                                    item.current_release.published : ''
-                            ].join(' ')
+                        ['div',
+                            { class: 'media-body' },
+                            ['ul',
+                                ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
+                                [
+                                    'li',
+                                    'Contributors',
+                                    ['ul', (function () {
+                                        var k, rtn = [];
+                                        for (k in item.events) {
+                                            rtn.push(['li', ['a', { href: 'https://github.com/' + k }, k]])
+                                        }
+                                        return rtn;
+                                    }())]
+                                ],
+                                [
+                                    'li',
+                                    'Branches: ' + item.branches.length
+                                ]
+                            ]
                         ],
-                        ['ul',
-                            ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
+                        ['div',
+                            { class: 'media-right' },
                             [
-                                'li',
-                                'Contributors',
-                                ['ul', (function () {
-                                    var k, rtn = [];
-                                    for (k in item.events) {
-                                        rtn.push(['li', ['a', { href: 'https://github.com/' + k }, k]])
-                                    }
-                                    return rtn;
-                                }())]
-                            ],
-                            [
-                                'li',
-                                'Branches: ' + item.branches.length
+                                'h3',
+                                'Current Release:',
+                                ['em', [
+                                    item.current_release.name,
+                                    '-',
+                                    item.current_release.published ?
+                                        item.current_release.published : ''
+                                ].join(' ')]
                             ]
                         ]
                     ];
