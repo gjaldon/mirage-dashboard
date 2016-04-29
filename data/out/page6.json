@@ -39,7 +39,7 @@
     "user": "dbuenzli",
     "current_release": { "name": "No release yet...", "total": 0 },
     "branches": [ "master" ],
-    "events": { "dbuenzli": 2, "cakeplus": 2 }
+    "events": {}
   },
   {
     "repo": "uutf",

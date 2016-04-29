@@ -26,11 +26,37 @@
       "rd"
     ],
     "events": {
-      "seliopou": 60,
-      "tmcgilchrist": 17,
+      "seliopou": 59,
+      "tmcgilchrist": 14,
       "brakmic": 3,
       "zoggy": 2
     }
+  },
+  {
+    "repo": "Digestif",
+    "user": "oklm-wsh",
+    "current_release": {
+      "name": "No release yet...",
+      "total": 0
+    },
+    "branches": [
+      "master"
+    ],
+    "events": {}
+  },
+  {
+    "repo": "Callipyge",
+    "user": "oklm-wsh",
+    "current_release": {
+      "name": "0.1",
+      "published": "2015-10-11T21:10:15Z",
+      "total": 1
+    },
+    "branches": [
+      "gh-pages",
+      "master"
+    ],
+    "events": {}
   },
   {
     "repo": "MrMime",
@@ -44,7 +70,7 @@
       "master"
     ],
     "events": {
-      "dinosaure": 49
+      "dinosaure": 50
     }
   },
   {
@@ -117,6 +143,53 @@
       "mattgray": 4,
       "mor1": 4,
       "dbuenzli": 3
+    }
+  },
+  {
+    "repo": "nitrokey-nethsm",
+    "user": "Nitrokey",
+    "current_release": {
+      "name": "No release yet...",
+      "total": 0
+    },
+    "branches": [
+      "core-std",
+      "master",
+      "staging-ansiwen",
+      "staging-jan"
+    ],
+    "events": {
+      "ansiwen": 115,
+      "jans23": 31
+    }
+  },
+  {
+    "repo": "Lz77",
+    "user": "oklm-wsh",
+    "current_release": {
+      "name": "No release yet...",
+      "total": 0
+    },
+    "branches": [
+      "master"
+    ],
+    "events": {
+      "dinosaure": 2
+    }
+  },
+  {
+    "repo": "Validator",
+    "user": "oklm-wsh",
+    "current_release": {
+      "name": "No release yet...",
+      "total": 0
+    },
+    "branches": [
+      "gh-pages",
+      "master"
+    ],
+    "events": {
+      "dinosaure": 15
     }
   },
   {
@@ -194,18 +267,18 @@
     ],
     "events": {
       "samoht": 68,
-      "talex5": 53,
-      "Drup": 35,
+      "talex5": 56,
+      "Drup": 34,
       "yomimono": 24,
       "avsm": 22,
-      "hannesm": 20,
-      "yallop": 10,
+      "hannesm": 21,
+      "yallop": 8,
       "jonludlam": 8,
       "sprout42": 6,
       "sgrove": 5,
       "djs55": 5,
-      "amirmc": 5,
       "ansiwen": 3,
+      "amirmc": 3,
       "dsheets": 2,
       "carriercomm": 2
     }
@@ -374,6 +447,7 @@
       "sgrove": 4,
       "carriercomm": 3,
       "talex5": 3,
+      "MarkMat320768": 2,
       "TWolverson": 2,
       "mattgray": 2,
       "ansiwen": 2,
@@ -392,7 +466,7 @@
       "master"
     ],
     "events": {
-      "djs55": 11,
+      "djs55": 9,
       "mor1": 8,
       "hannesm": 2
     }
@@ -656,13 +730,13 @@
       "master"
     ],
     "events": {
-      "samsunghoteltv": 8,
-      "talex5": 8,
+      "samsunghoteltv": 7,
+      "talex5": 6,
       "samoht": 3,
-      "vitcozzolino": 3,
       "Hiradur": 2,
       "mor1": 2,
-      "fxfactorial": 2
+      "fxfactorial": 2,
+      "vitcozzolino": 2
     }
   },
   {
@@ -744,7 +818,7 @@
       "master"
     ],
     "events": {
-      "djs55": 70,
+      "djs55": 67,
       "talex5": 7,
       "dsheets": 6,
       "samoht": 2,
@@ -2693,10 +2767,7 @@
     "branches": [
       "master"
     ],
-    "events": {
-      "dbuenzli": 2,
-      "cakeplus": 2
-    }
+    "events": {}
   },
   {
     "repo": "uutf",
@@ -3537,7 +3608,7 @@
       "master"
     ],
     "events": {
-      "yallop": 121,
+      "yallop": 123,
       "coveralls": 16,
       "whitequark": 8,
       "orbitz": 8,
@@ -3791,9 +3862,9 @@
       "shell-config"
     ],
     "events": {
-      "Engil": 138,
-      "hannesm": 77,
-      "voila": 30,
+      "Engil": 133,
+      "hannesm": 81,
+      "voila": 31,
       "dbuenzli": 10,
       "dinosaure": 9,
       "reynir": 7,
@@ -3841,11 +3912,12 @@
       "total": 0
     },
     "branches": [
+      "gh-pages",
       "master"
     ],
     "events": {
-      "rudenoise": 98,
-      "hannesm": 6,
+      "rudenoise": 132,
+      "hannesm": 8,
       "avsm": 3,
       "amirmc": 3,
       "samoht": 2

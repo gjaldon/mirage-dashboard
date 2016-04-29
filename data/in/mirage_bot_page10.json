@@ -12,6 +12,18 @@
     ]
   },
   {
+    "repo": "oklm-wsh/Digestif",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "oklm-wsh/Callipyge",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
     "repo": "oklm-wsh/MrMime",
     "tags": [
       "fromMirageBot"
@@ -37,6 +49,24 @@
   },
   {
     "repo": "mattgray/devwinter2016",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "Nitrokey/nitrokey-nethsm",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "oklm-wsh/Lz77",
+    "tags": [
+      "fromMirageBot"
+    ]
+  },
+  {
+    "repo": "oklm-wsh/Validator",
     "tags": [
       "fromMirageBot"
     ]

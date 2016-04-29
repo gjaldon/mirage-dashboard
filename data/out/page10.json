@@ -16,18 +16,36 @@
     },
     "branches": [ "master", "rd" ],
     "events": {
-      "seliopou": 60,
-      "tmcgilchrist": 17,
+      "seliopou": 59,
+      "tmcgilchrist": 14,
       "brakmic": 3,
       "zoggy": 2
     }
+  },
+  {
+    "repo": "Digestif",
+    "user": "oklm-wsh",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": {}
+  },
+  {
+    "repo": "Callipyge",
+    "user": "oklm-wsh",
+    "current_release": {
+      "name": "0.1",
+      "published": "2015-10-11T21:10:15Z",
+      "total": 1
+    },
+    "branches": [ "gh-pages", "master" ],
+    "events": {}
   },
   {
     "repo": "MrMime",
     "user": "oklm-wsh",
     "current_release": { "name": "No release yet...", "total": 0 },
     "branches": [ "gh-pages", "master" ],
-    "events": { "dinosaure": 49 }
+    "events": { "dinosaure": 50 }
   },
   {
     "repo": "ocaml-dispatch",
@@ -73,5 +91,26 @@
     "current_release": { "name": "No release yet...", "total": 0 },
     "branches": [ "master" ],
     "events": { "mattgray": 4, "mor1": 4, "dbuenzli": 3 }
+  },
+  {
+    "repo": "nitrokey-nethsm",
+    "user": "Nitrokey",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "core-std", "master", "staging-ansiwen", "staging-jan" ],
+    "events": { "ansiwen": 115, "jans23": 31 }
+  },
+  {
+    "repo": "Lz77",
+    "user": "oklm-wsh",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "master" ],
+    "events": { "dinosaure": 2 }
+  },
+  {
+    "repo": "Validator",
+    "user": "oklm-wsh",
+    "current_release": { "name": "No release yet...", "total": 0 },
+    "branches": [ "gh-pages", "master" ],
+    "events": { "dinosaure": 15 }
   }
 ]

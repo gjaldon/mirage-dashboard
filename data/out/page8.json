@@ -11,7 +11,7 @@
       "0.2-fixes", "0.3-fixes", "0.4-fixes", "gh-pages", "master"
     ],
     "events": {
-      "yallop": 121,
+      "yallop": 123,
       "coveralls": 16,
       "whitequark": 8,
       "orbitz": 8,
@@ -159,9 +159,9 @@
     "current_release": { "name": "No release yet...", "total": 0 },
     "branches": [ "master", "new-last-updated", "shell-config" ],
     "events": {
-      "Engil": 138,
-      "hannesm": 77,
-      "voila": 30,
+      "Engil": 133,
+      "hannesm": 81,
+      "voila": 31,
       "dbuenzli": 10,
       "dinosaure": 9,
       "reynir": 7,
@@ -188,10 +188,10 @@
     "repo": "mirage-dashboard",
     "user": "rudenoise",
     "current_release": { "name": "No release yet...", "total": 0 },
-    "branches": [ "master" ],
+    "branches": [ "gh-pages", "master" ],
     "events": {
-      "rudenoise": 98,
-      "hannesm": 6,
+      "rudenoise": 132,
+      "hannesm": 8,
       "avsm": 3,
       "amirmc": 3,
       "samoht": 2
