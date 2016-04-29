@@ -42,6 +42,7 @@ body {
 }
 
 .container.repos {
+  padding-right: 30px;
   padding-left: 0;
 }
 
@@ -52,7 +53,6 @@ body {
 }
 .jumbotron.repo {
   text-align: left;
-  padding-right: 30px;
   background: #e6ffe6;
 }
 
