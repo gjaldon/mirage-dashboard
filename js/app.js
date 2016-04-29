@@ -15,11 +15,11 @@
                     return [
                         'div',
                         { class: 'jumbotron repo' },
-                        ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                         ['div',
                             { class: 'row'},
                             ['div',
                                 { class: 'col-md-8' },
+                                ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                                 ['ul',
                                     ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
                                     [
@@ -32,10 +32,6 @@
                                             }
                                             return rtn;
                                         }())]
-                                    ],
-                                    [
-                                        'li',
-                                        'Branches: ' + item.branches.length
                                     ]
                                 ]
                             ],
@@ -44,13 +40,13 @@
                                 [
                                     'h3',
                                     'Current Release:',
-                                    ['em', [
-                                        item.current_release.name,
-                                        '-',
-                                        item.current_release.published ?
-                                            item.current_release.published : ''
-                                    ].join(' ')]
-                                ]
+                                ],
+                                ['h4', item.current_release.name]
+                                ['p',
+                                    item.current_release.published ?
+                                        'Published: ' + item.current_release.published : ''
+                                ],
+                                ['p', 'Branches: ' + item.branches.length ]
                             ]
                         ]
                     ];
