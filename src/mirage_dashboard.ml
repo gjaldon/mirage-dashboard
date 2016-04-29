@@ -20,7 +20,7 @@ let command =
     (fun cookie_name repos_json_path () ->
        Lwt_main.run (
          (
-           Lwt_list.map_p
+           Lwt_list.map_s
              (
                fun (user, repo) ->
                  (

@@ -66,12 +66,12 @@ git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 Use the app (with its extremely limited form):
 
 ```sh
-./mirage_dashboard.native -c mirage-dashboard -r data/repos_from_trove.json | jq '[.[]
+./mirage_dashboard.native -c mirage-dashboard -r data/in/all.json
+# it'll take a while, hitting each repo in sequence to keep below the rate limit
 ```
 
 ## TO DO:
 
-* handle rate limit from API in OCaml app
 * tag repos with relevant meta-data for filtering in web-UI
 * break down event data
   * commits since release with dates
@@ -97,6 +97,7 @@ Use the app (with its extremely limited form):
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
   gather basic data about the _MirageOS_ ecosystem.
 * Crawl dependencies
+* handle rate limit from API in OCaml app
 
 ## Sources of inspiration/theft:
 
