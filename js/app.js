@@ -41,7 +41,7 @@
                                     'h3',
                                     'Current Release:'
                                 ],
-                                ['h4', item.current_release.name]
+                                ['h4', item.current_release.name],
                                 ['p',
                                     item.current_release.published ?
                                         'Published: ' + item.current_release.published : ''
