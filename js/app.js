@@ -47,7 +47,7 @@
                                         'Published: ' + item.current_release.published : ''
                                 ],
                                 ['p', 'Branches: ' + item.branches.length ],
-                                ['p', 'Build status: ' ['img', {
+                                ['p', 'Build status: ', ['img', {
                                     src: 'https://api.travis-ci.org/' + item.user + '/' + item.repo + '.svg?branch=master'
                                 }]]
                             ]
