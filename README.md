@@ -4,6 +4,8 @@ A dashboard displaying useful data from
 [MirageOS](https://mirage.io/) project and its related
 repositories.
 
+View the [mirage-dashboard](http://rudenoise.github.io/mirage-dashboard/)
+
 ## Overview
 
 MirageOS is continually updating/improving, keeping track of these
