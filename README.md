@@ -30,7 +30,7 @@ I'm starting this project as a learning exercise.
 ### How are the libraries chosen?
 
 To get things going there is a JSON file
-[repos.js](https://raw.githubusercontent.com/rudenoise/mirage-dashboard/master/data/repos.json)
+[repos.js](https://raw.githubusercontent.com/rudenoise/mirage-dashboard/master/data/in/all.json)
 that lists all relevant repositories.
 
 Each repo has tags to help categorise them. Tags could include:
@@ -69,15 +69,27 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
-* Create web-accessible HTML/JS dashboard (static)
+* handle rate limit from API in OCaml app
+* tag repos with relevant meta-data for filtering in web-UI
+* break down event data
+  * commits since release with dates
+  * open PRs
+  * open issues
+* get licence
+* get CI status, if any
+* add filtering/sorting to web UI
+  * tags
+  * recent activity
+  * open issues
+  * branch count
 * Wrap in Mirage Unikernel
 * Serve publicly
-* handle rate limit from API
 * Cache data to limit GitHub API calls
 
 ## Done:
 
 * README
+* Create web-accessible HTML/JS dashboard (static)
 * Start with CLI app
 * Dump data to JSON
 * Use [ocaml-github](https://github.com/mirage/ocaml-github) to
