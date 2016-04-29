@@ -32,7 +32,7 @@
                                 ['ul', (function () {
                                     var k, rtn = [];
                                     for (k in item.events) {
-                                        rtn.push(['li', k])
+                                        rtn.push(['li', ['a', { href: 'https://github.com/' + k }, k]])
                                     }
                                     return rtn;
                                 }())]
