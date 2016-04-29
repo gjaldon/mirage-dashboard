@@ -14,7 +14,7 @@
                 data.repos.map(function (item) {
                     return [
                         'div',
-                        { class: 'container' },
+                        { class: 'jumbotron repo' },
                         ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                         [
                             'h3',
