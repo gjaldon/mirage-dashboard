@@ -10,11 +10,11 @@
         var app = document.getElementById('app'),
             markupArr = [
                 'div',
-                { class: 'container' }
+                { class: 'container' },
                 data.repos.map(function (item) {
                     return [
                         'div',
-                        { class: 'container' }
+                        { class: 'container' },
                         ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                         [
                             'h3',
