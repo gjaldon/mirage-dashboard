@@ -17,9 +17,9 @@
                         { class: 'jumbotron repo' },
                         ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                         ['div',
-                            { class: 'media'},
+                            { class: 'row'},
                             ['div',
-                                { class: 'media-body' },
+                                { class: 'col-md-8' },
                                 ['ul',
                                     ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
                                     [
@@ -40,7 +40,7 @@
                                 ]
                             ],
                             ['div',
-                                { class: 'media-right' },
+                                { class: 'col-md-4' },
                                 [
                                     'h3',
                                     'Current Release:',
