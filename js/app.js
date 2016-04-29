@@ -18,7 +18,7 @@
                         ['div',
                             { class: 'row'},
                             ['div',
-                                { class: 'col-md-8' },
+                                { class: 'col-md-5' },
                                 ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
                                 ['ul',
                                     ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
@@ -36,7 +36,7 @@
                                 ]
                             ],
                             ['div',
-                                { class: 'col-md-4' },
+                                { class: 'col-md-3' },
                                 [
                                     'h3',
                                     'Current Release:'
