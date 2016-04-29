@@ -39,7 +39,7 @@
                                 { class: 'col-md-4' },
                                 [
                                     'h3',
-                                    'Current Release:',
+                                    'Current Release:'
                                 ],
                                 ['h4', item.current_release.name]
                                 ['p',
