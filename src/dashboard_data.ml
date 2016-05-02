@@ -29,7 +29,12 @@ let repo_list_from_json file_path =
                 Yojson.Safe.Util.member
                   "tags"
                   item
-              ) |> Yojson.Safe.Util.to_list
+              ) |>
+              Yojson.Safe.Util.to_list |>
+              List.map ~f:(
+                fun item ->
+                  `String (Yojson.Safe.Util.to_string item)
+              )
             )
           )
         )
@@ -40,6 +45,9 @@ let all_repos ~repos_json_path =
   repo_list_from_json repos_json_path
   |> (fun repo_list ->
       List.map
-        ~f:fst
+        ~f:(
+          fun ((user, repo), tags) ->
+            (user, repo, `List tags)
+        )
         repo_list
     )

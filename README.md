@@ -72,7 +72,6 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
-* tag repos with relevant meta-data for filtering in web-UI
 * break down event data
   * commits since release with dates
   * open PRs
@@ -84,6 +83,10 @@ Use the app (with its extremely limited form):
   * recent activity
   * open issues
   * branch count
+* Get build status from
+  [travis api](https://api.travis-ci.org/repositories/mirage/ocaml-cohttp.json?branch=master)
+  use [ocaml-cohttp](https://github.com/mirage/ocaml-cohttp)?
+* remove all usage of _Core.Std_
 * Wrap in Mirage Unikernel
 * Serve publicly
 * Cache data to limit GitHub API calls
@@ -98,6 +101,8 @@ Use the app (with its extremely limited form):
   gather basic data about the _MirageOS_ ecosystem.
 * Crawl dependencies
 * handle rate limit from API in OCaml app
+* tag repos with relevant meta-data for filtering in web-UI
+* add created_at field to data
 
 ## Sources of inspiration/theft:
 

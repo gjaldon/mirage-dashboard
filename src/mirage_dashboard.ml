@@ -22,7 +22,7 @@ let command =
          (
            Lwt_list.map_s
              (
-               fun (user, repo) ->
+               fun (user, repo, tags) ->
                  (
                    Lwt_list.map_p
                      (
@@ -45,7 +45,8 @@ let command =
                      ("user", `String user);
                      ("current_release", current_release);
                      ("branches", branches);
-                     ("events", events)
+                     ("events", events);
+                     ("tags", tags)
                    ]
                  )
 
@@ -53,7 +54,12 @@ let command =
              (Dashboard_data.all_repos ~repos_json_path)
          ) >>=
          fun r_list ->
-         Yojson.pretty_to_string (`List r_list)
+         Yojson.pretty_to_string (
+           `Assoc [
+             ("created_at", `Int (int_of_float (Unix.time())));
+             ("repos", `List r_list)
+           ]
+         )
          |> Lwt_io.printf "%s\n"
        )
     )
