@@ -63,7 +63,7 @@
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                printData(xhr.responseText);
+                printData(JSON.parse(xhr.responseText));
             } else {
                 console.error(xhr.status);
             }
