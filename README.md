@@ -85,6 +85,9 @@ Use the app (with its extremely limited form):
   * recent activity
   * open issues
   * branch count
+* Get build status from
+  [travis api](https://api.travis-ci.org/repositories/mirage/ocaml-cohttp.json?branch=master)
+  use [ocaml-cohttp](https://github.com/mirage/ocaml-cohttp)?
 * Wrap in Mirage Unikernel
 * Serve publicly
 * Cache data to limit GitHub API calls
