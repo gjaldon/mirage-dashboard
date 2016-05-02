@@ -2,4 +2,4 @@
 
 val all_repos :
   repos_json_path:string ->
-  (Core.Std.String.t * Core.Std.String.t) list
+  (Core.Std.String.t * Core.Std.String.t * Yojson.json) list

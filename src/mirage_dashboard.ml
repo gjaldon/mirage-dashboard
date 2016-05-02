@@ -22,7 +22,7 @@ let command =
          (
            Lwt_list.map_s
              (
-               fun (user, repo) ->
+               fun (user, repo, tags) ->
                  (
                    Lwt_list.map_p
                      (
@@ -45,7 +45,8 @@ let command =
                      ("user", `String user);
                      ("current_release", current_release);
                      ("branches", branches);
-                     ("events", events)
+                     ("events", events);
+                     ("tags", tags)
                    ]
                  )
 
