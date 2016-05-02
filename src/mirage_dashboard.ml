@@ -54,7 +54,12 @@ let command =
              (Dashboard_data.all_repos ~repos_json_path)
          ) >>=
          fun r_list ->
-         Yojson.pretty_to_string (`List r_list)
+         Yojson.pretty_to_string (
+           `Assoc [
+             ("created_at", `Int (int_of_float (Unix.time())));
+             ("repos", `List r_list)
+           ]
+         )
          |> Lwt_io.printf "%s\n"
        )
     )
