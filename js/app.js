@@ -11,6 +11,7 @@
             markupArr = [
                 'div',
                 { class: 'container repos' },
+                ['h2', 'Last updated: ' + (new Date(data.created_at * 1000)).toString()],
                 data.repos.map(function (item) {
                     return [
                         'div',
@@ -60,14 +61,9 @@
     }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
-        var resObj;
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                resObj = {
-                    repos: JSON.parse(xhr.responseText),
-                    arrived: (new Date()).toJSON()
-                };
-                printData(resObj);
+                printData(xhr.responseText);
             } else {
                 console.error(xhr.status);
             }
