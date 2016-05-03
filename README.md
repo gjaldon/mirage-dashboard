@@ -76,8 +76,8 @@ Use the app (with its extremely limited form):
   * commits since release with dates
   * open PRs
   * open issues
+* include repo description
 * get licence
-* get CI status, if any
 * add filtering/sorting to web UI
   * tags
   * recent activity
@@ -103,6 +103,7 @@ Use the app (with its extremely limited form):
 * handle rate limit from API in OCaml app
 * tag repos with relevant meta-data for filtering in web-UI
 * add created_at field to data
+* get CI status, if any
 
 ## Sources of inspiration/theft:
 
