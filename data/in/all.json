@@ -1454,7 +1454,8 @@
   {
     "repo": "rudenoise/mirage-dashboard",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "dashboard"
     ]
   },
   {
