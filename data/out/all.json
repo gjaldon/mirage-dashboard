@@ -1,12 +1,12 @@
 {
-  "created_at": 1462269242,
+  "created_at": 1462361896,
   "repos": [
     {
       "repo": "mirage-xen-virtualbox",
       "user": "mattgray",
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "master" ],
-      "events": { "rudenoise": 2 },
+      "events": { "mattgray": 2, "rudenoise": 2 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -51,7 +51,7 @@
       "user": "oklm-wsh",
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "gh-pages", "master" ],
-      "events": { "dinosaure": 64 },
+      "events": { "dinosaure": 66 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -144,9 +144,11 @@
         "use-uri-conduit", "v2-interface"
       ],
       "events": {
-        "rgrinberg": 73,
+        "rgrinberg": 74,
+        "zoggy": 9,
         "avsm": 8,
         "edwintorok": 7,
+        "hannesm": 5,
         "c-cube": 5,
         "dsheets": 3,
         "whitequark": 3,
@@ -174,18 +176,18 @@
         "test-framework", "v3-build", "xen-blkif"
       ],
       "events": {
-        "samoht": 76,
-        "talex5": 64,
-        "Drup": 25,
+        "samoht": 77,
+        "talex5": 69,
+        "hannesm": 24,
         "yomimono": 24,
-        "hannesm": 23,
+        "Drup": 22,
         "avsm": 22,
         "djs55": 6,
         "sprout42": 6,
-        "jonludlam": 6,
         "sgrove": 4,
         "ansiwen": 3,
         "amirmc": 3,
+        "jonludlam": 3,
         "dsheets": 2,
         "carriercomm": 2
       },
@@ -242,8 +244,9 @@
         "djs55": 44,
         "avsm": 28,
         "hannesm": 23,
+        "samoht": 6,
         "artemkin": 6,
-        "samoht": 5,
+        "talex5": 5,
         "nojb": 5,
         "dsheets": 4,
         "copy": 3,
@@ -285,7 +288,7 @@
       },
       "branches": [ "2.3.1", "master" ],
       "events": {
-        "yomimono": 42,
+        "yomimono": 45,
         "hannesm": 17,
         "avsm": 15,
         "djs55": 13,
@@ -317,17 +320,18 @@
         "total": 2
       },
       "branches": [
-        "bootstrap", "deploy-travis", "master", "travis-senv", "v2-interface"
+        "bootstrap", "deploy-travis", "master", "revert-444-add-pgp-key",
+        "travis-senv", "v2-interface"
       ],
       "events": {
-        "samoht": 41,
+        "samoht": 63,
+        "hannesm": 16,
         "amirmc": 14,
         "Drup": 13,
-        "hannesm": 11,
         "yallop": 9,
         "yomimono": 8,
-        "GemmaG": 6,
-        "avsm": 5,
+        "avsm": 7,
+        "GemmaG": 7,
         "mor1": 4,
         "sgrove": 4,
         "carriercomm": 3,
@@ -375,7 +379,7 @@
       "branches": [ "master", "mirage-dev" ],
       "events": {
         "samoht": 41,
-        "hannesm": 28,
+        "hannesm": 29,
         "azul": 25,
         "yomimono": 24,
         "djs55": 17,
@@ -398,16 +402,16 @@
       "repo": "ocaml-git",
       "user": "mirage",
       "current_release": {
-        "name": "1.7.2",
-        "published": "2016-02-23T17:38:31Z",
-        "total": 32
+        "name": "1.8.0",
+        "published": "2016-05-04T08:15:03Z",
+        "total": 33
       },
       "branches": [ "gh-pages", "master", "pack" ],
       "events": {
-        "samoht": 34,
+        "samoht": 46,
         "talex5": 11,
         "dbuenzli": 5,
-        "dinosaure": 3,
+        "dinosaure": 4,
         "rgrinberg": 2,
         "sjfloat": 2
       },
@@ -417,13 +421,13 @@
       "repo": "irmin",
       "user": "mirage",
       "current_release": {
-        "name": "0.10.0",
-        "published": "2015-10-14T20:56:14Z",
-        "total": 22
+        "name": "0.11.0",
+        "published": "2016-05-04T11:07:16Z",
+        "total": 24
       },
       "branches": [ "gh-pages", "master" ],
       "events": {
-        "samoht": 43,
+        "samoht": 52,
         "talex5": 13,
         "Engil": 8,
         "hannesm": 7,
@@ -472,18 +476,18 @@
       "repo": "mirage-net-xen",
       "user": "mirage",
       "current_release": {
-        "name": "v1.6.0",
-        "published": "2016-04-09T15:45:30Z",
-        "total": 11
+        "name": "v1.6.1",
+        "published": "2016-05-03T10:42:31Z",
+        "total": 13
       },
       "branches": [ "1.4", "master" ],
       "events": {
-        "hannesm": 18,
+        "talex5": 26,
+        "hannesm": 22,
         "djs55": 16,
-        "talex5": 13,
-        "samoht": 7,
-        "yomimono": 5,
-        "avsm": 2
+        "samoht": 10,
+        "avsm": 10,
+        "yomimono": 5
       },
       "tags": [ "fromMirageBot" ]
     },
@@ -491,16 +495,17 @@
       "repo": "alcotest",
       "user": "mirage",
       "current_release": {
-        "name": "0.4.9",
-        "published": "2016-04-25T10:48:38Z",
-        "total": 16
+        "name": "0.4.10",
+        "published": "2016-05-03T14:38:53Z",
+        "total": 17
       },
       "branches": [ "gh-pages", "master" ],
       "events": {
-        "samoht": 51,
-        "hannesm": 5,
+        "samoht": 58,
+        "hannesm": 8,
         "Drup": 4,
         "ihodes": 4,
+        "avsm": 2,
         "dariusf": 2,
         "yallop": 2
       },
@@ -714,16 +719,16 @@
       "repo": "ocaml-cow",
       "user": "mirage",
       "current_release": {
-        "name": "v1.4.0",
-        "published": "2015-09-27T18:01:27Z",
-        "total": 16
+        "name": "v2.0.1",
+        "published": "2016-05-03T17:00:34Z",
+        "total": 17
       },
       "branches": [ "gh-pages", "labeled-arg-antiquot", "master" ],
       "events": {
         "samoht": 50,
         "tbrk": 10,
+        "avsm": 9,
         "dsheets": 8,
-        "avsm": 5,
         "Drup": 4,
         "chrismamo1": 2
       },
@@ -807,7 +812,7 @@
         "total": 10
       },
       "branches": [ "master" ],
-      "events": { "djs55": 8, "avsm": 4, "samoht": 2 },
+      "events": { "djs55": 8, "avsm": 4, "hannesm": 2, "samoht": 2 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -954,7 +959,7 @@
         "total": 5
       },
       "branches": [ "gh-pages", "master" ],
-      "events": { "samoht": 3 },
+      "events": { "samoht": 6 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -974,7 +979,7 @@
       "user": "mirage",
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "master", "xen-stable-4.6" ],
-      "events": { "avsm": 2, "carriercomm": 2 },
+      "events": { "avsm": 4, "carriercomm": 2 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1326,7 +1331,7 @@
         "total": 2
       },
       "branches": [ "buggy-db", "master", "travis" ],
-      "events": { "talex5": 4 },
+      "events": { "talex5": 5 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1334,7 +1339,7 @@
       "user": "talex5",
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "master" ],
-      "events": {},
+      "events": { "talex5": 2 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1346,7 +1351,7 @@
         "total": 1
       },
       "branches": [ "debug", "master", "travis" ],
-      "events": { "talex5": 23, "cfcs": 5 },
+      "events": { "talex5": 24, "cfcs": 5 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1429,7 +1434,7 @@
         "optimise_writes", "patterns", "relative-paths", "vhd-util",
         "writing-experiment"
       ],
-      "events": { "lesserevil": 6, "mxk": 3 },
+      "events": { "lesserevil": 8, "mxk": 3 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1459,7 +1464,7 @@
         "0.4.0-beta", "0.4.0-gamma", "dirent-size", "fix-rename-out",
         "log_error", "master"
       ],
-      "events": { "dsheets": 58, "yallop": 20 },
+      "events": { "dsheets": 58, "yallop": 21 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -2502,8 +2507,8 @@
       "repo": "ike",
       "user": "isakmp",
       "current_release": { "name": "No release yet...", "total": 0 },
-      "branches": [ "4.3", "master" ],
-      "events": { "hannesm": 49, "sg2342": 22 },
+      "branches": [ "master" ],
+      "events": { "hannesm": 53, "sg2342": 22 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -2534,9 +2539,9 @@
         "0.2-fixes", "0.3-fixes", "0.4-fixes", "gh-pages", "master"
       ],
       "events": {
-        "yallop": 125,
-        "coveralls": 19,
-        "whitequark": 10,
+        "yallop": 126,
+        "coveralls": 22,
+        "whitequark": 14,
         "orbitz": 8,
         "rleonid": 5,
         "seliopou": 3,
@@ -2664,8 +2669,8 @@
         "published": "2015-12-20T17:03:13Z",
         "total": 2
       },
-      "branches": [ "4.3", "gh-pages", "master" ],
-      "events": { "hannesm": 3 },
+      "branches": [ "gh-pages", "master" ],
+      "events": { "hannesm": 7 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -2698,13 +2703,13 @@
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "master", "new-css", "new-last-updated", "shell-config" ],
       "events": {
-        "Engil": 121,
-        "hannesm": 90,
-        "voila": 46,
+        "Engil": 117,
+        "hannesm": 96,
+        "voila": 48,
         "dbuenzli": 10,
         "dinosaure": 9,
         "reynir": 7,
-        "wiredsister": 4,
+        "wiredsister": 3,
         "avsm": 2,
         "soapdog": 2
       },
@@ -2732,13 +2737,13 @@
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "gh-pages", "master" ],
       "events": {
-        "rudenoise": 151,
+        "rudenoise": 158,
         "hannesm": 8,
         "avsm": 3,
         "amirmc": 3,
         "samoht": 2
       },
-      "tags": [ "fromMirageBot", "dashboard" ]
+      "tags": [ "fromMirageBot" ]
     },
     {
       "repo": "irmin-playground",
