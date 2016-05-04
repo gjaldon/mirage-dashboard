@@ -2,7 +2,8 @@
   {
     "repo": "mattgray/mirage-xen-virtualbox",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -128,7 +129,8 @@
   {
     "repo": "mirage/mirage-block-xen",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -146,7 +148,8 @@
   {
     "repo": "mirage/mirage-net-xen",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -176,7 +179,8 @@
   {
     "repo": "mirage/xen-arm-builder",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -260,7 +264,8 @@
   {
     "repo": "mirage/ocaml-xenstore",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -338,7 +343,8 @@
   {
     "repo": "mirage/ocaml-xenstore-server",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -356,7 +362,8 @@
   {
     "repo": "mirage/mirage-bootvar-xen",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -422,7 +429,8 @@
   {
     "repo": "mirage/xenbigarray",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -434,7 +442,8 @@
   {
     "repo": "mirage/xen-disk",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -488,7 +497,8 @@
   {
     "repo": "mirage/mirage-xen-minios",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -530,7 +540,8 @@
   {
     "repo": "mirage/xentropyd",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -584,13 +595,15 @@
   {
     "repo": "djs55/ocaml-xenstore-clients",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
     "repo": "djs55/xenopsd-previous",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -764,7 +777,8 @@
   {
     "repo": "djs55/ocaml-xenstore-xen",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
@@ -1580,7 +1594,8 @@
   {
     "repo": "nojb/xen-urandom-proxy",
     "tags": [
-      "fromMirageBot"
+      "fromMirageBot",
+      "xen"
     ]
   },
   {
