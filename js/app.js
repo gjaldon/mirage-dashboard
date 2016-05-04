@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var dataCache;
+    var dataCache, tagsCache, filterByTag, changeListener;
     function getData() {
         var endpoint = '/mirage-dashboard/data/out/all.json';
         console.log('GET', endpoint);
@@ -13,8 +13,8 @@
                 'div',
                 { class: 'container repos' },
                 ['h2', 'Last updated: ' + (new Date(data.created_at * 1000)).toString()],
-                ['div', {id: 'controls'}, tags],
-                data.repos.map(function (item) {
+                ['div', {id: 'controls'}, ['p', 'filter by tag:', tags]],
+                _.map(data.repos, function (item) {
                     return [
                         'div',
                         { class: 'jumbotron repo' },
@@ -58,34 +58,58 @@
                     ];
                 })
             ];
-        app.appendChild(lmd(markupArr));
+        app.innerHTML = lms(markupArr);
+        filterByTag = document.getElementById('filterByTag');
+        filterByTag
+            .addEventListener('change', changeListener);
     }
     function collectTags(repos) {
-        var tags = [];
-        repos.forEach(function (repo) {
-            repo.tags.forEach(function (tag) {
-                if (tags.indexOf(tag) >= 0) {
+        var tags = ['all'];
+        _.forEach(repos, function (repo) {
+            _.forEach(repo.tags, function (tag) {
+                if (tags.indexOf(tag) < 0) {
                     tags.push(tag);
                 }
             });
         });
+        console.log(repos.length, tags);
         return tags;
     }
     function makeTags(tags) {
         return [
             'select',
+            { id: 'filterByTag'},
             tags.map(function (tag) {
-                return ['option', tag];
+                var selected = false;
+                if (filterByTag && filterByTag.value === tag) {
+                    selected = 'selected'
+                }
+                return ['option', { selected: selected }, tag];
             })
         ];
+    }
+    changeListener = function () {
+        console.log(filterByTag.value);
+        app.innerHTML = lms(['p', 'Loading...']);
+        var filtered = _.clone(dataCache),
+            tags = makeTags(collectTags(dataCache.repos));
+        if (filterByTag.value === 'all') {
+            printData(dataCache, tagsCache);
+        } else {
+            filtered.repos = _.filter(filtered.repos, function (repo) {
+                return repo.tags.indexOf(filterByTag.value) >= 0;
+            });
+            printData(filtered, tags);
+        }
     }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 dataCache = JSON.parse(xhr.responseText);
+                tagsCache = makeTags(collectTags(dataCache.repos));
                 
-                printData(dataCache, makeTags(collectTags(dataCache.repos)));
+                printData(dataCache, tagsCache);
             } else {
                 console.error(xhr.status);
             }

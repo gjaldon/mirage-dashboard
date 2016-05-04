@@ -2738,7 +2738,7 @@
         "amirmc": 3,
         "samoht": 2
       },
-      "tags": [ "fromMirageBot" ]
+      "tags": [ "fromMirageBot", "dashboard" ]
     },
     {
       "repo": "irmin-playground",
