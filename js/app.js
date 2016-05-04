@@ -13,7 +13,7 @@
                 'div',
                 { class: 'container repos' },
                 ['h2', 'Last updated: ' + (new Date(data.created_at * 1000)).toString()],
-                ['div', {id: controls}, tags],
+                ['div', {id: 'controls'}, tags],
                 data.repos.map(function (item) {
                     return [
                         'div',
