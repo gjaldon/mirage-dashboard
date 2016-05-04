@@ -72,6 +72,8 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
+* improve contributors data (events may not be the best source)
+* improve releases data (straight to opam or use tags)
 * break down event data
   * commits since release with dates
   * open PRs
