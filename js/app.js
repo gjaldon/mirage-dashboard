@@ -36,7 +36,7 @@
                                             return rtn;
                                         }())]
                                     ],
-                                    ['li', 'Tags: ' ['em', item.tags.join(', ')]]
+                                    ['li', 'Tags: ', ['em', item.tags.join(', ')]]
                                 ]
                             ],
                             ['div',
