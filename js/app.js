@@ -58,7 +58,6 @@
                     ];
                 })
             ];
-        console.log(markupArr);
         app.appendChild(lmd(markupArr));
     }
     function collectTags(repos) {
@@ -73,12 +72,12 @@
         return tags;
     }
     function makeTags(tags) {
-        return lmd([
+        return [
             'select',
             tags.map(function (tag) {
                 return ['option', tag];
             })
-        ]);
+        ];
     }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
