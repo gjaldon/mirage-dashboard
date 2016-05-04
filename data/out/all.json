@@ -1,5 +1,5 @@
 {
-  "created_at": 1462361896,
+  "created_at": 1462366868,
   "repos": [
     {
       "repo": "mirage-xen-virtualbox",
@@ -145,7 +145,7 @@
       ],
       "events": {
         "rgrinberg": 74,
-        "zoggy": 9,
+        "zoggy": 10,
         "avsm": 8,
         "edwintorok": 7,
         "hannesm": 5,
@@ -242,7 +242,7 @@
       "branches": [ "master", "travis" ],
       "events": {
         "djs55": 44,
-        "avsm": 28,
+        "avsm": 33,
         "hannesm": 23,
         "samoht": 6,
         "artemkin": 6,
@@ -1331,7 +1331,7 @@
         "total": 2
       },
       "branches": [ "buggy-db", "master", "travis" ],
-      "events": { "talex5": 5 },
+      "events": { "talex5": 6 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1462,9 +1462,9 @@
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [
         "0.4.0-beta", "0.4.0-gamma", "dirent-size", "fix-rename-out",
-        "log_error", "master"
+        "log_error", "master", "update-travis"
       ],
-      "events": { "dsheets": 58, "yallop": 21 },
+      "events": { "dsheets": 64, "yallop": 21 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -1731,7 +1731,7 @@
       "user": "dbuenzli",
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "master" ],
-      "events": { "dbuenzli": 43, "Khady": 3, "fdopen": 2 },
+      "events": { "dbuenzli": 49, "Khady": 3, "fdopen": 2 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -2358,7 +2358,7 @@
         "total": 7
       },
       "branches": [ "gh-pages", "master", "test" ],
-      "events": { "avsm": 53 },
+      "events": { "avsm": 54 },
       "tags": [ "fromMirageBot" ]
     },
     {
@@ -2539,7 +2539,7 @@
         "0.2-fixes", "0.3-fixes", "0.4-fixes", "gh-pages", "master"
       ],
       "events": {
-        "yallop": 126,
+        "yallop": 129,
         "coveralls": 22,
         "whitequark": 14,
         "orbitz": 8,
@@ -2737,7 +2737,7 @@
       "current_release": { "name": "No release yet...", "total": 0 },
       "branches": [ "gh-pages", "master" ],
       "events": {
-        "rudenoise": 158,
+        "rudenoise": 162,
         "hannesm": 8,
         "avsm": 3,
         "amirmc": 3,
