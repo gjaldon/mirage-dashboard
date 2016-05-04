@@ -79,17 +79,17 @@ Use the app (with its extremely limited form):
 * include repo description
 * get licence
 * add filtering/sorting to web UI
-  * tags
   * recent activity
   * open issues
   * branch count
+* add filtering/sorting to CLI app
 * Get build status from
   [travis api](https://api.travis-ci.org/repositories/mirage/ocaml-cohttp.json?branch=master)
   use [ocaml-cohttp](https://github.com/mirage/ocaml-cohttp)?
 * remove all usage of _Core.Std_
 * Wrap in Mirage Unikernel
 * Serve publicly
-* Cache data to limit GitHub API calls
+* Cache data (and/or background process github interrogation) to limit GitHub API calls
 
 ## Done:
 
@@ -104,6 +104,8 @@ Use the app (with its extremely limited form):
 * tag repos with relevant meta-data for filtering in web-UI
 * add created_at field to data
 * get CI status, if any
+* add filtering/sorting to web UI
+  * tags
 
 ## Sources of inspiration/theft:
 
