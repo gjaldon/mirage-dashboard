@@ -104,11 +104,19 @@ let get_current ~cookie_name ~user ~repo =
   return (latest_relese releases_list)
 
 let get_latest_tag ~cookie_name ~user ~repo =
-  get_tags
-    ~cookie_name
-    ~user
-    ~repo
-  >>= fun tags ->
-  Github_wrapper.stream_to_list tags
-  >>= fun tags_list ->
-  return (latest_tag tags_list)
+  catch
+    (
+      fun () ->
+        get_tags
+          ~cookie_name
+          ~user
+          ~repo
+        >>= fun tags ->
+        Github_wrapper.stream_to_list tags
+        >>= fun tags_list ->
+        return (latest_tag tags_list)
+    )
+    (
+      function
+      | _ -> return (`String "No tags yet...")
+    )
