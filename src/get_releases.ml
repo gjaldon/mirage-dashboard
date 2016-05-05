@@ -27,6 +27,14 @@ let get_releases ~cookie_name ~user ~repo =
   >>= fun token ->
   get_releases_for_repo ~token ~user ~repo
 
+let get_tags_for_repo ~token ~user ~repo =
+  return (G.Repo.get_tags_and_times ~token ~user ~repo ())
+
+let get_tags ~cookie_name ~user ~repo =
+  Github_wrapper.get_token ~cookie_name
+  >>= fun token ->
+  get_tags_for_repo ~token ~user ~repo
+
 let release_values release total =
   let release_str = Github_j.string_of_release release in
   let release_data = Yojson.Safe.from_string release_str in
@@ -59,6 +67,14 @@ let latest_relese releases =
       ]
     )
 
+let latest_tag tags =
+  let total = List.length tags in
+  if total > 0
+  then
+    let (time_str, tag_str) = (List.hd tags) in
+    `String (time_str ^ " - " ^ tag_str)
+  else `String "No tags yet..."
+
 let get_current ~cookie_name ~user ~repo =
     get_releases
       ~cookie_name
@@ -68,3 +84,13 @@ let get_current ~cookie_name ~user ~repo =
     Github_wrapper.stream_to_list releases
     >>= fun releases_list ->
     return (latest_relese releases_list)
+
+let get_latest_tag ~cookie_name ~user ~repo =
+  get_tags
+    ~cookie_name
+    ~user
+    ~repo
+  >>= fun tags ->
+  Github_wrapper.stream_to_list tags
+  >>= fun tags_list ->
+  return (latest_tag tags_list)

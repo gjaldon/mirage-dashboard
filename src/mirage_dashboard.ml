@@ -31,19 +31,22 @@ let command =
                      )
                      [
                        (Get_releases.get_current ~cookie_name ~user ~repo);
+                       (Get_releases.get_latest_tag ~cookie_name ~user ~repo);
                        (Get_branches.get_branches ~cookie_name ~user ~repo);
                        (Get_events.get_events_per_user ~cookie_name ~user ~repo)
                      ]
                  ) >>=
                  fun json_list ->
                  let current_release = get_item_at_index json_list 0 in
-                 let branches = get_item_at_index json_list 1 in
-                 let events = get_item_at_index json_list 2 in
+                 let current_tag = get_item_at_index json_list 1 in
+                 let branches = get_item_at_index json_list 2 in
+                 let events = get_item_at_index json_list 3 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
                      ("user", `String user);
                      ("current_release", current_release);
+                     ("current_tag", current_tag);
                      ("branches", branches);
                      ("events", events);
                      ("tags", tags)
