@@ -56,6 +56,7 @@ let release_values release total =
     ]
   )
 
+
 let latest_relese releases =
   let total = List.length releases in
   if total > 0
@@ -67,12 +68,27 @@ let latest_relese releases =
       ]
     )
 
+let sort_tags tags =
+  List.sort
+    (
+      fun a b ->
+        let (_, created_a) = a in
+        let (_, created_b) = b in
+        if created_a < created_b then 1 else 0
+    )
+    tags
+
+
 let latest_tag tags =
   let total = List.length tags in
   if total > 0
   then
-    let (time_str, tag_str) = (List.hd tags) in
-    `String (time_str ^ " - " ^ tag_str)
+    let sorted_tags = sort_tags tags in
+    let (tag_name, created_at) = (List.hd sorted_tags) in
+    `Assoc [
+      ("name", `String tag_name);
+      ("created_at", `String created_at)
+    ]
   else `String "No tags yet..."
 
 let get_current ~cookie_name ~user ~repo =
