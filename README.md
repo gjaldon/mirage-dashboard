@@ -66,7 +66,7 @@ git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 Use the app (with its extremely limited form):
 
 ```sh
-./mirage_dashboard.native -c mirage-dashboard -r data/in/all.json
+./mirage_dashboard.native -c mirage-dashboard -r data/in/all.json -o data/out/all.json
 # it'll take a while, hitting each repo in sequence to keep below the rate limit
 ```
 

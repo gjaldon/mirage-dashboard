@@ -11,13 +11,14 @@ let spec =
   empty
   +> flag "-c" (required string) ~doc:"cookie github auth cookie, from git-jar"
   +> flag "-r" (required string) ~doc:"path to json file describing repositories"
+  +> flag "-o" (required string) ~doc:"path to write json file output"
 
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
     ~readme: (fun () -> "More detailed info")
     spec
-    (fun cookie_name repos_json_path () ->
+    (fun cookie_name repos_json_path write_to_path () ->
        Lwt_main.run (
          (
            Lwt_list.map_s
@@ -57,13 +58,16 @@ let command =
              (Dashboard_data.all_repos ~repos_json_path)
          ) >>=
          fun r_list ->
-         Yojson.pretty_to_string (
-           `Assoc [
-             ("created_at", `Int (int_of_float (Unix.time())));
-             ("repos", `List r_list)
-           ]
-         )
-         |> Lwt_io.printf "%s\n"
+         Yojson.to_file
+           write_to_path
+           (
+             `Assoc [
+               ("created_at", `Int (int_of_float (Unix.time())));
+               ("repos", `List r_list)
+             ]
+           )
+         |> fun () ->
+         Lwt_io.printf "%s\n" "DONE!"
        )
     )
 
