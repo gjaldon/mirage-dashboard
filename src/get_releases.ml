@@ -19,6 +19,8 @@ open Lwt
 
 module G = Github
 
+(* RELEASES:*)
+
 let get_releases_for_repo ~token ~user ~repo =
   return (G.Release.for_repo ~token ~user ~repo ())
 
@@ -26,14 +28,6 @@ let get_releases ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   get_releases_for_repo ~token ~user ~repo
-
-let get_tags_for_repo ~token ~user ~repo =
-  return (G.Repo.get_tags_and_times ~token ~user ~repo ())
-
-let get_tags ~cookie_name ~user ~repo =
-  Github_wrapper.get_token ~cookie_name
-  >>= fun token ->
-  get_tags_for_repo ~token ~user ~repo
 
 let release_values release total =
   let release_str = Github_j.string_of_release release in
@@ -56,7 +50,6 @@ let release_values release total =
     ]
   )
 
-
 let latest_relese releases =
   let total = List.length releases in
   if total > 0
@@ -68,6 +61,16 @@ let latest_relese releases =
       ]
     )
 
+(* TAGS: *)
+
+let get_tags_for_repo ~token ~user ~repo =
+  return (G.Repo.get_tags_and_times ~token ~user ~repo ())
+
+let get_tags ~cookie_name ~user ~repo =
+  Github_wrapper.get_token ~cookie_name
+  >>= fun token ->
+  get_tags_for_repo ~token ~user ~repo
+
 let sort_tags tags =
   List.sort
     (
@@ -77,7 +80,6 @@ let sort_tags tags =
         if created_a < created_b then 1 else 0
     )
     tags
-
 
 let latest_tag tags =
   let total = List.length tags in
@@ -92,14 +94,14 @@ let latest_tag tags =
   else `String "No tags yet..."
 
 let get_current ~cookie_name ~user ~repo =
-    get_releases
-      ~cookie_name
-      ~user
-      ~repo
-    >>= fun releases ->
-    Github_wrapper.stream_to_list releases
-    >>= fun releases_list ->
-    return (latest_relese releases_list)
+  get_releases
+    ~cookie_name
+    ~user
+    ~repo
+  >>= fun releases ->
+  Github_wrapper.stream_to_list releases
+  >>= fun releases_list ->
+  return (latest_relese releases_list)
 
 let get_latest_tag ~cookie_name ~user ~repo =
   get_tags
