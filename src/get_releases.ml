@@ -19,6 +19,14 @@ open Lwt
 
 module G = Github
 
+let no_release rel_type =
+  `Assoc [
+    ("name", `String ("No " ^ rel_type ^ " yet..."));
+    ("published_at", `String "-");
+    ("of_total", `Int 0);
+    ("type", `String rel_type)
+  ]
+
 (* RELEASES:*)
 
 let get_releases_for_repo ~token ~user ~repo =
@@ -45,8 +53,9 @@ let release_values release total =
   (
     `Assoc [
       ("name", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)));
-      ("published", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)));
-      ("total", `Int total)
+      ("published_at", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)));
+      ("of_total", `Int total);
+      ("type", `String "release")
     ]
   )
 
@@ -54,12 +63,7 @@ let latest_relese releases =
   let total = List.length releases in
   if total > 0
   then release_values (List.hd releases) total
-  else (
-      `Assoc [
-        ("name", `String "No release yet...");
-        ("total", `Int 0)
-      ]
-    )
+  else no_release "releases"
 
 (* TAGS: *)
 
@@ -89,9 +93,11 @@ let latest_tag tags =
     let (tag_name, created_at) = (List.hd sorted_tags) in
     `Assoc [
       ("name", `String tag_name);
-      ("created_at", `String created_at)
+      ("published_at", `String created_at);
+      ("of_total", `Int total);
+      ("type", `String "tag")
     ]
-  else `String "No tags yet..."
+  else no_release "tags"
 
 let get_current ~cookie_name ~user ~repo =
   get_releases
