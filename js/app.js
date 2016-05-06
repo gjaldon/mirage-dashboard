@@ -45,10 +45,10 @@
                                     'h3',
                                     'Current Release:'
                                 ],
-                                ['h4', item.current_release.name],
-                                ['p', 'Published: ' + item.current_release.published_at],
-                                ['h4', item.current_tag.name],
-                                ['p', 'Published: ' + item.current_tag.published_at],
+                                ['h4', item.current_release_or_tag.name],
+                                item.current_release_or_tag.of_total > 0 ?
+                                    ['p', 'Published ' + item.current_release_or_tag.type + ': ' + item.current_release_or_tag.published_at] :
+                                    [],
                                 ['p', 'Branches: ' + item.branches.length ],
                                 ['p', 'Build status: ', ['img', {
                                     src: 'https://api.travis-ci.org/' + item.user + '/' + item.repo + '.svg?branch=master'
