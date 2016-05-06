@@ -66,12 +66,14 @@ git-list-events -c mirage-dashboard rudenoise/mirage-dashboard
 Use the app (with its extremely limited form):
 
 ```sh
-./mirage_dashboard.native -c mirage-dashboard -r data/in/all.json
+./mirage_dashboard.native -c mirage-dashboard -r data/in/all.json -o data/out/all.json
 # it'll take a while, hitting each repo in sequence to keep below the rate limit
 ```
 
 ## TO DO:
 
+* improve contributors data (events may not be the best source)
+* improve releases data (straight to opam or use tags)
 * break down event data
   * commits since release with dates
   * open PRs

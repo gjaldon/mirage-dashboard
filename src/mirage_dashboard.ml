@@ -11,13 +11,14 @@ let spec =
   empty
   +> flag "-c" (required string) ~doc:"cookie github auth cookie, from git-jar"
   +> flag "-r" (required string) ~doc:"path to json file describing repositories"
+  +> flag "-o" (required string) ~doc:"path to write json file output"
 
 let command =
   Command.basic
     ~summary: "A dashboard displaying useful data from the Mirage OS project and its related repositories."
     ~readme: (fun () -> "More detailed info")
     spec
-    (fun cookie_name repos_json_path () ->
+    (fun cookie_name repos_json_path write_to_path () ->
        Lwt_main.run (
          (
            Lwt_list.map_s
@@ -31,19 +32,22 @@ let command =
                      )
                      [
                        (Get_releases.get_current ~cookie_name ~user ~repo);
+                       (Get_releases.get_latest_tag ~cookie_name ~user ~repo);
                        (Get_branches.get_branches ~cookie_name ~user ~repo);
                        (Get_events.get_events_per_user ~cookie_name ~user ~repo)
                      ]
                  ) >>=
                  fun json_list ->
                  let current_release = get_item_at_index json_list 0 in
-                 let branches = get_item_at_index json_list 1 in
-                 let events = get_item_at_index json_list 2 in
+                 let current_tag = get_item_at_index json_list 1 in
+                 let branches = get_item_at_index json_list 2 in
+                 let events = get_item_at_index json_list 3 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
                      ("user", `String user);
                      ("current_release", current_release);
+                     ("current_tag", current_tag);
                      ("branches", branches);
                      ("events", events);
                      ("tags", tags)
@@ -54,13 +58,16 @@ let command =
              (Dashboard_data.all_repos ~repos_json_path)
          ) >>=
          fun r_list ->
-         Yojson.pretty_to_string (
-           `Assoc [
-             ("created_at", `Int (int_of_float (Unix.time())));
-             ("repos", `List r_list)
-           ]
-         )
-         |> Lwt_io.printf "%s\n"
+         Yojson.to_file
+           write_to_path
+           (
+             `Assoc [
+               ("created_at", `Int (int_of_float (Unix.time())));
+               ("repos", `List r_list)
+             ]
+           )
+         |> fun () ->
+         Lwt_io.printf "%s\n" "DONE!"
        )
     )
 
