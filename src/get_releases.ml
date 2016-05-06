@@ -124,5 +124,5 @@ let get_latest_tag ~cookie_name ~user ~repo =
     )
     (
       function
-      | _ -> return (`String "No tags yet...")
+      | _ -> return (no_release "tags")
     )
