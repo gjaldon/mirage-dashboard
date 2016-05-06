@@ -1,0 +1,21 @@
+[
+    {
+        "repo": "mirage/ocaml-ipaddr",
+        "tags": [
+            "test-tag"
+        ]
+    },
+    {
+        "repo": "mirage/mirage",
+        "tags": [
+            "test-tag"
+        ]
+    },
+    {
+        "repo": "rudenoise/mirage-dashboard",
+        "tags": [
+            "test-tag"
+        ]
+    }
+]
+

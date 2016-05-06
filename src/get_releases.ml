@@ -19,12 +19,13 @@ open Lwt
 
 module G = Github
 
-let no_release rel_type =
+let release_to_json detail =
+  let (name, published_at, total, release_type) = detail in
   `Assoc [
-    ("name", `String ("No " ^ rel_type ^ " yet..."));
-    ("published_at", `String "-");
-    ("of_total", `Int 0);
-    ("type", `String rel_type)
+    ("name", `String (name));
+    ("published_at", `String published_at);
+    ("of_total", `Int total);
+    ("type", `String release_type)
   ]
 
 (* RELEASES:*)
@@ -50,20 +51,15 @@ let release_values release total =
       "published_at"
       release_data
   ) in
-  (
-    `Assoc [
-      ("name", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)));
-      ("published_at", `String (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)));
-      ("of_total", `Int total);
-      ("type", `String "release")
-    ]
+  release_to_json (
+    (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)),
+    (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)),
+    total,
+    "releases"
   )
 
-let latest_relese releases =
-  let total = List.length releases in
-  if total > 0
-  then release_values (List.hd releases) total
-  else no_release "releases"
+let latest_relese releases total =
+  release_values (List.hd releases) total
 
 let get_current_release ~cookie_name ~user ~repo =
   get_releases
@@ -99,13 +95,13 @@ let latest_tag tags =
   then
     let sorted_tags = sort_tags tags in
     let (tag_name, created_at) = (List.hd sorted_tags) in
-    `Assoc [
-      ("name", `String tag_name);
-      ("published_at", `String created_at);
-      ("of_total", `Int total);
-      ("type", `String "tag")
-    ]
-  else no_release "tags"
+    release_to_json (
+      tag_name,
+      created_at,
+      total,
+      "tag"
+    )
+  else release_to_json ("No tag or release, yet...", "", 0, "releases or tags")
 
 let get_latest_tag ~cookie_name ~user ~repo =
   catch
@@ -122,7 +118,7 @@ let get_latest_tag ~cookie_name ~user ~repo =
     )
     (
       function
-      | _ -> return (no_release "releases or tags")
+      | _ -> return (release_to_json ("No tag or release, yet...", "", 0, "releases or tags"))
     )
 
 (* combine the two, returning release if there is one, then tag, or none/default *)
@@ -132,5 +128,5 @@ let get_current_release_or_tag ~cookie_name ~user ~repo =
   >>= fun releases_list ->
   let total = List.length releases_list in
   if total > 0
-  then return (latest_relese releases_list)
+  then return (latest_relese releases_list total)
   else get_latest_tag ~cookie_name ~user ~repo

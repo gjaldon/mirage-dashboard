@@ -72,8 +72,8 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
+* compare tag and release date, then choose most recent
 * improve contributors data (events may not be the best source)
-* improve releases data (straight to opam or use tags)
 * break down event data
   * commits since release with dates
   * open PRs
@@ -108,6 +108,7 @@ Use the app (with its extremely limited form):
 * get CI status, if any
 * add filtering/sorting to web UI
   * tags
+* improve releases data (straight to opam or use tags)
 
 ## Sources of inspiration/theft:
 
