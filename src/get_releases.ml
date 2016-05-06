@@ -65,6 +65,14 @@ let latest_relese releases =
   then release_values (List.hd releases) total
   else no_release "releases"
 
+let get_current_release ~cookie_name ~user ~repo =
+  get_releases
+    ~cookie_name
+    ~user
+    ~repo
+  >>= fun releases ->
+  Github_wrapper.stream_to_list releases
+
 (* TAGS: *)
 
 let get_tags_for_repo ~token ~user ~repo =
@@ -99,16 +107,6 @@ let latest_tag tags =
     ]
   else no_release "tags"
 
-let get_current ~cookie_name ~user ~repo =
-  get_releases
-    ~cookie_name
-    ~user
-    ~repo
-  >>= fun releases ->
-  Github_wrapper.stream_to_list releases
-  >>= fun releases_list ->
-  return (latest_relese releases_list)
-
 let get_latest_tag ~cookie_name ~user ~repo =
   catch
     (
@@ -124,5 +122,15 @@ let get_latest_tag ~cookie_name ~user ~repo =
     )
     (
       function
-      | _ -> return (no_release "tags")
+      | _ -> return (no_release "releases or tags")
     )
+
+(* combine the two, returning release if there is one, then tag, or none/default *)
+
+let get_current_release_or_tag ~cookie_name ~user ~repo =
+  get_current_release ~cookie_name ~user ~repo
+  >>= fun releases_list ->
+  let total = List.length releases_list in
+  if total > 0
+  then return (latest_relese releases_list)
+  else get_latest_tag ~cookie_name ~user ~repo
