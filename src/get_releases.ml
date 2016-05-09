@@ -73,7 +73,9 @@ let get_latest_release ~cookie_name ~user ~repo =
   get_releases ~cookie_name ~user ~repo
   >>= fun releases_list ->
   let total = List.length releases_list in
-  return (latest_relese releases_list total)
+  if total > 0
+  then return (latest_relese releases_list total)
+  else return ("No releases, yet...", "", 0, "release")
 
 (* TAGS: *)
 
@@ -130,7 +132,6 @@ let get_latest_tag ~cookie_name ~user ~repo =
 (* combine the two, returning release if there is one, then tag, or none/default *)
 
 let get_current_release_or_tag ~cookie_name ~user ~repo =
-  (*
   Lwt_list.map_p
     (
       fun closure ->
@@ -148,13 +149,3 @@ let get_current_release_or_tag ~cookie_name ~user ~repo =
   if release_date > tag_date
   then return (release_to_json release)
   else return (release_to_json tag)
-     *)
-
-  get_releases ~cookie_name ~user ~repo
-  >>= fun releases_list ->
-  let total = List.length releases_list in
-  if total > 0
-  then return (release_to_json (latest_relese releases_list total))
-  else get_latest_tag ~cookie_name ~user ~repo
-    >>= fun tag ->
-    return (release_to_json tag)
