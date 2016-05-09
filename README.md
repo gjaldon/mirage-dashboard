@@ -72,9 +72,6 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
-* compare tag and release date, then choose most recent
-  (e.g. [ocaml-ipaddr/releases](https://github.com/mirage/ocaml-ipaddr/releases))
-  is this the right thing to do?
 * improve contributors data (events may not be the best source)
 * break down event data
   * commits since release with dates
@@ -111,6 +108,7 @@ Use the app (with its extremely limited form):
 * add filtering/sorting to web UI
   * tags
 * improve releases data (straight to opam or use tags)
+* compare tag and release date, then choose most recent
 
 ## Sources of inspiration/theft:
 
