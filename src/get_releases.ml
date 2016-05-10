@@ -55,7 +55,7 @@ let release_values release total =
     (Github_wrapper.strip_quotes (Yojson.Safe.to_string name)),
     (Github_wrapper.strip_quotes (Yojson.Safe.to_string published)),
     total,
-    "releases"
+    "release"
   )
 
 let get_releases ~cookie_name ~user ~repo =
@@ -145,7 +145,7 @@ let get_current_release_or_tag ~cookie_name ~user ~repo =
   let release = List.nth rel_list 0 in
   let tag = List.nth rel_list 1 in
   let (_, release_date, _, _) = release in
-  let (_, tag_date, _, _) = release in
+  let (_, tag_date, _, _) = tag in
   if release_date > tag_date
   then return (release_to_json release)
   else return (release_to_json tag)
