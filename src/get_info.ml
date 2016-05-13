@@ -11,7 +11,6 @@ let get_info_with_token ~token ~user ~repo =
       in return (`String descr)
   )
 
-
 let get_info_with_cookie ~cookie_name ~user ~repo =
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
