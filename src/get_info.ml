@@ -12,10 +12,11 @@ let get_info_with_token (repo_with_token:Github_wrapper.repo_with_token) =
       in return (`String descr)
   )
 
-let get_info_with_cookie ~cookie_name ~user ~repo =
+let get_info_with_cookie (repo_with_cookie:Github_wrapper.repo_with_cookie_name) =
+  let (cookie_name, user, repo) = repo_with_cookie in
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   get_info_with_token (token, user, repo)
 
 let get_info ~cookie_name ~user ~repo =
-  get_info_with_cookie ~cookie_name ~user ~repo
+  get_info_with_cookie (cookie_name, user, repo)
