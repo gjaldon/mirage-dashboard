@@ -33,7 +33,8 @@ let release_to_json detail =
 let get_releases_for_repo ~token ~user ~repo =
   return (G.Release.for_repo ~token ~user ~repo ())
 
-let get_releases ~cookie_name ~user ~repo =
+let get_releases_stream (repo_with_cookie_name:Github_wrapper.repo_with_cookie_name) =
+  let (cookie_name, user, repo) = repo_with_cookie_name in
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   get_releases_for_repo ~token ~user ~repo
@@ -58,19 +59,16 @@ let release_values release total =
     "release"
   )
 
-let get_releases ~cookie_name ~user ~repo =
-  get_releases
-    ~cookie_name
-    ~user
-    ~repo
+let get_releases (repo_with_cookie_name:Github_wrapper.repo_with_cookie_name) =
+  get_releases_stream repo_with_cookie_name
   >>= fun releases ->
   Github_wrapper.stream_to_list releases
 
 let latest_relese releases total =
   release_values (List.hd releases) total
 
-let get_latest_release ~cookie_name ~user ~repo =
-  get_releases ~cookie_name ~user ~repo
+let get_latest_release (repo_with_cookie_name:Github_wrapper.repo_with_cookie_name) =
+  get_releases repo_with_cookie_name
   >>= fun releases_list ->
   let total = List.length releases_list in
   if total > 0
@@ -131,14 +129,15 @@ let get_latest_tag ~cookie_name ~user ~repo =
 
 (* combine the two, returning release if there is one, then tag, or none/default *)
 
-let get_current_release_or_tag ~cookie_name ~user ~repo =
+let get_current_release_or_tag (repo_with_cookie:Github_wrapper.repo_with_cookie_name) =
+  let (cookie_name, user, repo) = repo_with_cookie in
   Lwt_list.map_p
     (
       fun closure ->
         closure
     )
     [
-      (get_latest_release ~cookie_name ~user ~repo);
+      (get_latest_release repo_with_cookie);
       (get_latest_tag ~cookie_name ~user ~repo)
     ]
   >>= fun rel_list ->
