@@ -79,7 +79,6 @@ Use the app (with its extremely limited form):
   * commits since release with dates
   * open PRs
   * open issues
-* include repo description
 * get licence
 * add filtering/sorting to web UI
   * recent activity
@@ -111,6 +110,7 @@ Use the app (with its extremely limited form):
   * tags
 * improve releases data (straight to opam or use tags)
 * compare tag and release date, then choose most recent
+* include repo description
 
 ## Sources of inspiration/theft:
 
