@@ -89,7 +89,8 @@ let remove_watchers events_per_user =
     )
     events_per_user
 
-let get_events_per_user ~cookie_name ~user ~repo =
+let get_events_per_user (repo_with_cookie:Github_wrapper.repo_with_cookie_name) =
+  let (cookie_name, user, repo) = repo_with_cookie in
   Github_wrapper.get_token ~cookie_name
   >>= fun token ->
   return (Github.Event.for_repo ~token ~user ~repo ())

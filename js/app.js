@@ -23,6 +23,7 @@
                             ['div',
                                 { class: 'col-md-5' },
                                 ['h2', ['a', {href: 'https://github.com/' + item.user + '/' + item.repo }, item.repo]],
+                                ['p', item.info],
                                 ['ul',
                                     ['li', 'By: ', ['a', {href: 'https://github.com/' + item.user}, item.user] ],
                                     [

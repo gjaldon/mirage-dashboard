@@ -6,6 +6,12 @@ module M = Github.Monad
 
 exception Auth_token_not_found of string
 
+type cookie_name = string
+type user = string
+type repo = string
+type repo_with_cookie_name = (cookie_name * user * repo)
+type repo_with_token = (G.Token.t * user * repo)
+
 let get_auth_token_from_jar auth_id = 
   Github_cookie_jar.init ()
   >>= fun jar ->

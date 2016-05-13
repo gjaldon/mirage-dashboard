@@ -1,3 +1,3 @@
-val get_events_per_user :
+val get_info :
   Github_wrapper.repo_with_cookie_name ->
   Yojson.json Lwt.t

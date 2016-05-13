@@ -25,21 +25,24 @@ let command =
              (
                fun (user, repo, tags) ->
                  (
+                   let repo_with_cookie_name = (cookie_name, user, repo) in
                    Lwt_list.map_p
                      (
                        fun closure ->
                          closure
                      )
                      [
-                       (Get_releases.get_current_release_or_tag ~cookie_name ~user ~repo);
-                       (Get_branches.get_branches ~cookie_name ~user ~repo);
-                       (Get_events.get_events_per_user ~cookie_name ~user ~repo)
+                       (Get_releases.get_current_release_or_tag repo_with_cookie_name);
+                       (Get_branches.get_branches repo_with_cookie_name);
+                       (Get_events.get_events_per_user repo_with_cookie_name);
+                       (Get_info.get_info repo_with_cookie_name)
                      ]
                  ) >>=
                  fun json_list ->
                  let current_release_or_tag = get_item_at_index json_list 0 in
                  let branches = get_item_at_index json_list 1 in
                  let events = get_item_at_index json_list 2 in
+                 let info = get_item_at_index json_list 3 in
                  return (
                    `Assoc [
                      ("repo", `String repo);
@@ -47,7 +50,8 @@ let command =
                      ("current_release_or_tag", current_release_or_tag);
                      ("branches", branches);
                      ("events", events);
-                     ("tags", tags)
+                     ("tags", tags);
+                     ("info", info)
                    ]
                  )
 
