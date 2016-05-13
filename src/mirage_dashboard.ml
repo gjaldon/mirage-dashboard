@@ -34,7 +34,7 @@ let command =
                        (Get_releases.get_current_release_or_tag ~cookie_name ~user ~repo);
                        (Get_branches.get_branches ~cookie_name ~user ~repo);
                        (Get_events.get_events_per_user ~cookie_name ~user ~repo);
-                       (Get_info.get_info ~cookie_name ~user ~repo)
+                       (Get_info.get_info (cookie_name, user, repo))
                      ]
                  ) >>=
                  fun json_list ->
