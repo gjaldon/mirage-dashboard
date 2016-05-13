@@ -5,7 +5,7 @@ let get_info_with_token ~token ~user ~repo =
   run (
       Github.Repo.info ~token ~user ~repo ()
       >>~ fun info ->
-      let descr = match info.repository_description with
+      let descr = match info.Github_t.repository_description with
         | Some descr -> descr
         | None -> ""
       in return (`String descr)
