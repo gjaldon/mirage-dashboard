@@ -73,6 +73,8 @@ Use the app (with its extremely limited form):
 ## TO DO:
 
 * improve contributors data (events may not be the best source)
+  * cross-reference with [opam](https://github.com/ocaml/opam-repository)
+  * also look at [opam API 2.0](https://opam.ocaml.org/doc/2.0/api/)
 * break down event data
   * commits since release with dates
   * open PRs
