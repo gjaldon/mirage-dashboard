@@ -34,7 +34,7 @@ let command =
                          closure
                      )
                      [
-                       (Get_releases.get_current_release_or_tag repo_with_cookie_name);
+                       (Get_releases.get_current_release_or_tag (token, user, repo));
                        (Get_branches.get_branches (token, user, repo));
                        (Get_events.get_events_per_user repo_with_cookie_name);
                        (Get_info.get_info (token, user, repo))
