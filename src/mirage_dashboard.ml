@@ -27,17 +27,17 @@ let command =
              (
                fun (user, repo, tags) ->
                  (
-                   let repo_with_cookie_name = (cookie_name, user, repo) in
+                   let repo_with_token = (token, user, repo) in
                    Lwt_list.map_p
                      (
                        fun closure ->
                          closure
                      )
                      [
-                       (Get_releases.get_current_release_or_tag (token, user, repo));
-                       (Get_branches.get_branches (token, user, repo));
-                       (Get_events.get_events_per_user repo_with_cookie_name);
-                       (Get_info.get_info (token, user, repo))
+                       (Get_releases.get_current_release_or_tag repo_with_token);
+                       (Get_branches.get_branches repo_with_token);
+                       (Get_events.get_events_per_user repo_with_token);
+                       (Get_info.get_info repo_with_token)
                      ]
                  ) >>=
                  fun json_list ->
