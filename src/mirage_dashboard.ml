@@ -21,21 +21,23 @@ let command =
     (fun cookie_name repos_json_path write_to_path () ->
        Lwt_main.run (
          (
+           Github_wrapper.get_token cookie_name
+           >>= fun token ->
            Lwt_list.map_s
              (
                fun (user, repo, tags) ->
                  (
-                   let repo_with_cookie_name = (cookie_name, user, repo) in
+                   let repo_with_token = (token, user, repo) in
                    Lwt_list.map_p
                      (
                        fun closure ->
                          closure
                      )
                      [
-                       (Get_releases.get_current_release_or_tag repo_with_cookie_name);
-                       (Get_branches.get_branches repo_with_cookie_name);
-                       (Get_events.get_events_per_user repo_with_cookie_name);
-                       (Get_info.get_info repo_with_cookie_name)
+                       (Get_releases.get_current_release_or_tag repo_with_token);
+                       (Get_branches.get_branches repo_with_token);
+                       (Get_events.get_events_per_user repo_with_token);
+                       (Get_info.get_info repo_with_token)
                      ]
                  ) >>=
                  fun json_list ->
