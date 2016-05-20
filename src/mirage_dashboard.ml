@@ -34,10 +34,10 @@ let command =
                          closure
                      )
                      [
-                       (Get_releases.get_current_release_or_tag repo_with_token);
-                       (Get_branches.get_branches repo_with_token);
-                       (Get_events.get_events_per_user repo_with_token);
-                       (Get_info.get_info repo_with_token)
+                       (Releases.get_current_release_or_tag repo_with_token);
+                       (Branches.get_branches repo_with_token);
+                       (Events.get_events_per_user repo_with_token);
+                       (Repo_info.get_info repo_with_token)
                      ]
                  ) >>=
                  fun json_list ->
