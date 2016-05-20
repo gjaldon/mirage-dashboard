@@ -1,8 +1,8 @@
 open Lwt
 
-let get_info repo_with_token =
+let get_info (repo_with_token:Github_wrapper.repo_with_token) =
   let open Github.Monad in
-  let (token, user, repo) = (repo_with_token:Github_wrapper.repo_with_token) in
+  let (token, user, repo) = repo_with_token in
   run (
       Github.Repo.info ~token ~user ~repo ()
       >>~ fun info ->
