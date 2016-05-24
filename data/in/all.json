@@ -1675,5 +1675,11 @@
     "tags": [
       "fromMirageBot"
     ]
+  },
+  {
+    "repo": "dbuenzli/topkg",
+    "tags": [
+      "packager"
+    ]
   }
 ]
