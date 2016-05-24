@@ -1,6 +1,10 @@
 open Lwt
 
+<<<<<<< HEAD:src/get_info.ml
 let get_info repo_with_token =
+=======
+let get_info (repo_with_token:Github_wrapper.repo_with_token) =
+>>>>>>> master:src/repo_info.ml
   let open Github.Monad in
   let (token, user, repo) = repo_with_token in
   run (
