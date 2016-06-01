@@ -72,14 +72,18 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
+* look at
+  * [opam2web](https://github.com/ocaml/opam2web)
+  * [opamfu](https://github.com/ocamllabs/opamfu)
 * improve contributors data (events may not be the best source)
   * cross-reference with [opam](https://github.com/ocaml/opam-repository)
+    opamfu?
   * also look at [opam API 2.0](https://opam.ocaml.org/doc/2.0/api/)
 * break down event data
   * commits since release with dates
   * open PRs
   * open issues
-* get licence
+* get licence (opamfu?)
 * add filtering/sorting to web UI
   * recent activity
   * open issues
