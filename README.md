@@ -42,15 +42,15 @@ Please add/remove/update/edit/tag via pull requests.
 
 ## Work in progress:
 
-Build.
-
+Build:
 ```sh
+// currently ocaml-github is dependent on ocaml < 4.02.3
 oasis setup
 ./configure
 make
 ```
 
-Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
+Set up ocaml-github to list [Mirage repositories](https://github.com/mirage).
 
 Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
 
