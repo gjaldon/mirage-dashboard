@@ -44,6 +44,7 @@ Please add/remove/update/edit/tag via pull requests.
 
 Build:
 ```sh
+opam install bin_prot camlp4 comparelib core herelib lwt
 // currently ocaml-github is dependent on ocaml < 4.02.3
 oasis setup
 ./configure

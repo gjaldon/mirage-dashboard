@@ -9,10 +9,9 @@ BuildTools:     ocamlbuild, ocamlopt
 BuildDepends:   github.unix, str, core,
                 lwt, lwt.syntax,
                 yojson,
-                camlp4, threads, 
+                threads, 
                 sexplib, 
                 bin_prot, 
-                comparelib, 
                 herelib, 
                 herelib
 Executable "mirage_dashboard"
