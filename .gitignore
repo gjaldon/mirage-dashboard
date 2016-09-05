@@ -29,3 +29,6 @@ setup.log
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+
+myocamlbuild.ml
+setup.ml

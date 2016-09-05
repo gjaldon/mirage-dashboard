@@ -42,15 +42,16 @@ Please add/remove/update/edit/tag via pull requests.
 
 ## Work in progress:
 
-Build.
-
+Build:
 ```sh
+opam install bin_prot camlp4 comparelib core herelib lwt
+// currently ocaml-github is dependent on ocaml < 4.02.3
 oasis setup
 ./configure
 make
 ```
 
-Set up ocaml-git to list [Mirage repositories](https://github.com/mirage).
+Set up ocaml-github to list [Mirage repositories](https://github.com/mirage).
 
 Setup [git jar](https://github.com/mirage/ocaml-github#git-jar).
 
@@ -72,14 +73,18 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
+* look at
+  * [opam2web](https://github.com/ocaml/opam2web)
+  * [opamfu](https://github.com/ocamllabs/opamfu)
 * improve contributors data (events may not be the best source)
   * cross-reference with [opam](https://github.com/ocaml/opam-repository)
+    opamfu?
   * also look at [opam API 2.0](https://opam.ocaml.org/doc/2.0/api/)
 * break down event data
   * commits since release with dates
   * open PRs
   * open issues
-* get licence
+* get licence (opamfu?)
 * add filtering/sorting to web UI
   * recent activity
   * open issues
