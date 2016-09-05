@@ -9,11 +9,8 @@ BuildTools:     ocamlbuild, ocamlopt
 BuildDepends:   github.unix, str, core,
                 lwt, lwt.syntax,
                 yojson,
-                threads, 
-                sexplib, 
-                bin_prot, 
-                herelib, 
-                herelib
+                threads,
+                sexplib
 Executable "mirage_dashboard"
     Path: ./src
     MainIs: mirage_dashboard.ml
