@@ -98,19 +98,11 @@ let latest_tag tags =
   else ("No tag or release, yet...", "", 0, "releases or tags")
 
 let get_latest_tag (repo_with_token:Github_wrapper.repo_with_token) =
-  catch
-    (
-      fun () ->
-        get_tags_for_repo repo_with_token
-        >>= fun tags ->
-        Github_wrapper.stream_to_list tags
-        >>= fun tags_list ->
-        return (latest_tag tags_list)
-    )
-    (
-      function
-      | _ -> return ("No tag or release, yet...", "", 0, "releases or tags")
-    )
+    get_tags_for_repo repo_with_token
+    >>= fun tags ->
+    Github_wrapper.stream_to_list tags
+    >>= fun tags_list ->
+    return (latest_tag tags_list)
 
 (* combine the two, returning release if there is one, then tag, or none/default *)
 
