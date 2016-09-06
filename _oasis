@@ -7,7 +7,7 @@ License:        GPL
 Plugins:        META (0.4), DevFiles (0.4)
 BuildTools:     ocamlbuild, ocamlopt
 BuildDepends:   github.unix, str, core,
-                lwt, lwt.syntax,
+                lwt,
                 yojson,
                 threads,
                 sexplib

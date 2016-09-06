@@ -23,7 +23,7 @@ let command =
          (
            Github_wrapper.get_token cookie_name
            >>= fun token ->
-           Lwt_list.map_s
+           Lwt_list.map_p
              (
                fun (user, repo, tags) ->
                  (
