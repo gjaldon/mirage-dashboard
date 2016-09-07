@@ -16,7 +16,7 @@ I'm starting this project as a learning exercise.
 
 ### What will the dashboard show?
 
-* A list the core MirageOS libraries, on GitHub.
+* A list of the core MirageOS libraries, on GitHub.
 * Data related to each library:
   * Name
   * License
@@ -73,6 +73,7 @@ Use the app (with its extremely limited form):
 
 ## TO DO:
 
+* remove all usage of _Core.Std_
 * look at
   * [opam2web](https://github.com/ocaml/opam2web)
   * [opamfu](https://github.com/ocamllabs/opamfu)
@@ -93,7 +94,6 @@ Use the app (with its extremely limited form):
 * Get build status from
   [travis api](https://api.travis-ci.org/repositories/mirage/ocaml-cohttp.json?branch=master)
   use [ocaml-cohttp](https://github.com/mirage/ocaml-cohttp)?
-* remove all usage of _Core.Std_
 * Wrap in Mirage Unikernel
 * Serve publicly
 * Cache data (and/or background process github interrogation) to limit GitHub API calls
